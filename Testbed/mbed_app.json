@@ -1,0 +1,7 @@
+{
+    "config": {
+        "main_stack_size": {
+            "value": 12288
+        }
+    }
+}
