@@ -5786,12 +5786,6 @@
 		(uuid "056ea0d3-8403-4db1-bc1f-d6d9f4cef779")
 	)
 	(junction
-		(at 316.23 60.96)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "065ae510-0c8c-4de6-a452-cd8236b9e8c4")
-	)
-	(junction
 		(at 87.63 135.89)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5952,12 +5946,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7f7e17d8-ab94-4225-bb0b-0f23e463d757")
-	)
-	(junction
-		(at 316.23 52.07)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "8229e7a9-0f29-4cf0-aacf-9b87a2ac4b20")
 	)
 	(junction
 		(at 204.47 79.502)
@@ -6275,16 +6263,6 @@
 		)
 		(uuid "045ea29a-6d72-4b97-be5a-fd4b478f6c3a")
 	)
-	(wire
-		(pts
-			(xy 316.23 60.96) (xy 316.23 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "046c3c3e-3591-4ada-9708-44643a2aacde")
-	)
 	(polyline
 		(pts
 			(xy 231.648 103.886) (xy 231.648 118.11)
@@ -6314,16 +6292,6 @@
 			(type default)
 		)
 		(uuid "06096cb5-b555-4b3b-9b0f-4a9573da8dbd")
-	)
-	(wire
-		(pts
-			(xy 316.23 49.53) (xy 316.23 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "07195264-8e44-49aa-908a-62584a310e17")
 	)
 	(wire
 		(pts
@@ -7337,16 +7305,6 @@
 	)
 	(wire
 		(pts
-			(xy 316.23 52.07) (xy 346.71 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5e0c21f3-01cb-4203-bc6e-c361b93f2b2f")
-	)
-	(wire
-		(pts
 			(xy 109.22 137.16) (xy 106.68 137.16)
 		)
 		(stroke
@@ -8107,7 +8065,7 @@
 	)
 	(wire
 		(pts
-			(xy 308.61 60.96) (xy 316.23 60.96)
+			(xy 308.61 60.96) (xy 321.31 60.96)
 		)
 		(stroke
 			(width 0)
@@ -8617,16 +8575,6 @@
 	)
 	(wire
 		(pts
-			(xy 321.31 60.96) (xy 316.23 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2433de0-5ffb-4d7e-b02e-6c2c76b89831")
-	)
-	(wire
-		(pts
 			(xy 242.062 75.692) (xy 243.586 75.692)
 		)
 		(stroke
@@ -8634,16 +8582,6 @@
 			(type default)
 		)
 		(uuid "c26b2e1a-7f71-476f-bd54-bafc101b0b4b")
-	)
-	(wire
-		(pts
-			(xy 346.71 52.07) (xy 346.71 58.42)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c2a6052a-c526-478c-bb1d-4a24648b762f")
 	)
 	(wire
 		(pts
@@ -11466,71 +11404,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:VBUS")
-		(at 316.23 49.53 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2cfe16b8-9dc3-4f57-9c53-7e8a3bc8eeee")
-		(property "Reference" "#PWR017"
-			(at 316.23 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VDDIO"
-			(at 316.23 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 316.23 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 316.23 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 316.23 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "9280d227-f58b-4e8a-966a-328b576d38d5")
-		)
-		(instances
-			(project "ARES_FC"
-				(path "/449acbee-2eeb-4316-a8e9-c26dd430524e"
-					(reference "#PWR017")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 46.99 200.66 270)
 		(unit 1)
@@ -12365,71 +12238,6 @@
 			(project "ARES_FC"
 				(path "/449acbee-2eeb-4316-a8e9-c26dd430524e"
 					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VBUS")
-		(at 312.42 53.34 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3f5d4f98-95ce-4569-adda-8281c8a8f4aa")
-		(property "Reference" "#PWR016"
-			(at 312.42 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VDD"
-			(at 312.42 49.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 312.42 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 312.42 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 312.42 53.34 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "4e815189-0eca-47fb-a0a1-d277769929e1")
-		)
-		(instances
-			(project "ARES_FC"
-				(path "/449acbee-2eeb-4316-a8e9-c26dd430524e"
-					(reference "#PWR016")
 					(unit 1)
 				)
 			)
