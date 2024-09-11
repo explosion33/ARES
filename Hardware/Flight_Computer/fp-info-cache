@@ -1,4 +1,4 @@
-23748680325760442
+23769377577541325
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2554,6 +2554,13 @@ speaker CUI
 0
 2
 2
+CD-PA1616D
+XCVR_CD-PA1616D
+
+
+0
+20
+20
 Calibration_Scale
 Gauge_10mm_Type1_CopperTop
 Gauge, Massstab, 10mm, CopperTop, Type 1,
@@ -85679,6 +85686,13 @@ gps linx
 0
 22
 22
+RF_GPS
+PA1616S
+
+
+0
+0
+0
 RF_GPS
 Quectel_L70-R
 Quectel L70-R, (https://www.quectel.com/product/gps-only-l70-r)

@@ -1145,224 +1145,6 @@
 				)
 			)
 		)
-		(symbol "Device:Battery"
-			(pin_numbers hide)
-			(pin_names
-				(offset 0) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "BT"
-				(at 2.54 2.54 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "Battery"
-				(at 2.54 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 1.524 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "~"
-				(at 0 1.524 90)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Multiple-cell battery"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "batt voltage-source cell"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "Battery_0_1"
-				(rectangle
-					(start -2.286 -1.27)
-					(end 2.286 -1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -2.286 1.778)
-					(end 2.286 1.524)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -1.524 -2.032)
-					(end 1.524 -2.54)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(rectangle
-					(start -1.524 1.016)
-					(end 1.524 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -1.016) (xy 0 -0.762)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 -0.508) (xy 0 -0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 0.254)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 1.778) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.762 3.048) (xy 1.778 3.048)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 1.27 3.556) (xy 1.27 2.54)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Battery_1_1"
-				(pin passive line
-					(at 0 5.08 270)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin passive line
-					(at 0 -5.08 90)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "Device:C"
 			(pin_numbers hide)
 			(pin_names
@@ -3644,14 +3426,14 @@
 				)
 			)
 			(property "Value" "PA1616S"
-				(at 10.922 1.524 0)
+				(at 10.922 1.778 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "CD-PA1616D:XCVR_CD-PA1616D"
 				(at 0 0 0)
 				(effects
 					(font
@@ -3905,6 +3687,24 @@
 						)
 					)
 				)
+				(pin unspecified line
+					(at 24.13 -5.08 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 				(pin input line
 					(at -2.54 -5.08 0)
 					(length 2.54)
@@ -3916,24 +3716,6 @@
 						)
 					)
 					(number "2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-				(pin unspecified line
-					(at 24.13 -5.08 180)
-					(length 2.54)
-					(name "GND"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "20"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5942,12 +5724,6 @@
 		(uuid "6edca765-0378-4879-9ec7-095a56c8cc06")
 	)
 	(junction
-		(at 306.07 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "7c165187-7e15-4f54-b3ab-6487ce7089de")
-	)
-	(junction
 		(at 312.42 63.5)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6062,12 +5838,6 @@
 		(uuid "b727e6e3-bfaf-47dd-b615-0ee0335dd103")
 	)
 	(junction
-		(at 290.83 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "ba01a2ee-82ef-44b7-8e8c-824b948205ea")
-	)
-	(junction
 		(at 332.74 113.03)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6157,11 +5927,9 @@
 		(color 0 0 0 0)
 		(uuid "fc41526d-87e0-4e0d-944a-a78c3e19d313")
 	)
-	(junction
-		(at 292.1 118.11)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "fd2b192b-2441-4bd0-a324-5e100525ee78")
+	(no_connect
+		(at 337.82 118.11)
+		(uuid "0406028c-35f6-4bf1-8182-e17fef0d20ee")
 	)
 	(no_connect
 		(at 86.36 127)
@@ -6284,16 +6052,6 @@
 			(type default)
 		)
 		(uuid "05cc09ad-b7c1-4771-b2d4-a5bc07196087")
-	)
-	(wire
-		(pts
-			(xy 290.83 118.11) (xy 290.83 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "05e04f97-de39-4804-af67-c5954bd9741c")
 	)
 	(wire
 		(pts
@@ -6484,16 +6242,6 @@
 			(type default)
 		)
 		(uuid "137f47ad-0570-47c7-b77e-ff6cc9f44e2b")
-	)
-	(wire
-		(pts
-			(xy 306.07 118.11) (xy 337.82 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "14066780-13d2-43d6-9f8e-1d6b1507393f")
 	)
 	(wire
 		(pts
@@ -6967,16 +6715,6 @@
 	)
 	(wire
 		(pts
-			(xy 292.1 118.11) (xy 297.18 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3b511e39-3fe6-461b-8150-2ea6bb7f006b")
-	)
-	(wire
-		(pts
 			(xy 312.42 55.88) (xy 321.31 55.88)
 		)
 		(stroke
@@ -7194,16 +6932,6 @@
 			(type default)
 		)
 		(uuid "518d4b8e-e665-4679-809e-aedcdc786ff2")
-	)
-	(wire
-		(pts
-			(xy 290.83 118.11) (xy 292.1 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "52a577d1-725a-426e-a607-86e697ff6aea")
 	)
 	(wire
 		(pts
@@ -7687,16 +7415,6 @@
 	)
 	(wire
 		(pts
-			(xy 302.26 118.11) (xy 306.07 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b2a101e-e32c-4ad0-9aab-4664f8a1c7aa")
-	)
-	(wire
-		(pts
 			(xy 113.538 35.56) (xy 107.95 35.56)
 		)
 		(stroke
@@ -8024,16 +7742,6 @@
 			(type default)
 		)
 		(uuid "91b5133f-dda8-488a-b6af-d87e08795006")
-	)
-	(wire
-		(pts
-			(xy 306.07 119.38) (xy 306.07 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92e03c8a-2f02-4eaa-aa49-a29529fb4fae")
 	)
 	(wire
 		(pts
@@ -8727,16 +8435,6 @@
 	)
 	(wire
 		(pts
-			(xy 306.07 128.27) (xy 306.07 127)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd22f6d2-32d3-4dc4-b773-ae02d329ff92")
-	)
-	(wire
-		(pts
 			(xy 236.728 33.274) (xy 245.618 33.274)
 		)
 		(stroke
@@ -8904,16 +8602,6 @@
 			(type default)
 		)
 		(uuid "dbb1490d-f040-46a4-a71d-f6650408f9d1")
-	)
-	(wire
-		(pts
-			(xy 290.83 128.27) (xy 306.07 128.27)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dc3c3f7f-d0a3-40b7-9b95-b269d7573f6d")
 	)
 	(wire
 		(pts
@@ -9215,16 +8903,6 @@
 		)
 		(uuid "fb70af1b-bd09-4c12-9f13-857f1ad8b117")
 	)
-	(wire
-		(pts
-			(xy 289.56 118.11) (xy 290.83 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ffa2f183-6cad-4ab7-b986-69d3b0e99a1a")
-	)
 	(rectangle
 		(start 292.608 174.244)
 		(end 371.348 231.394)
@@ -9500,17 +9178,6 @@
 			(justify left bottom)
 		)
 		(uuid "1af98392-f578-49e9-ad2c-ea2efbb4844d")
-	)
-	(label "TX_RADIO"
-		(at 64.77 193.04 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1bbd6104-0be1-47de-a500-9abc8bc794bf")
 	)
 	(label "MOTOR_SCL"
 		(at 73.66 119.38 0)
@@ -9831,6 +9498,17 @@
 		)
 		(uuid "a39a8490-268a-48cf-b25f-6f86b520b6a0")
 	)
+	(label "RX_RADIO"
+		(at 64.77 193.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a4dd1542-efdd-49df-83c7-a18461effa49")
+	)
 	(label "PWR_LED_K"
 		(at 236.728 33.274 0)
 		(fields_autoplaced yes)
@@ -9940,17 +9618,6 @@
 			(justify left bottom)
 		)
 		(uuid "d0e7f787-5b95-46e3-a717-dfbe1903f805")
-	)
-	(label "RX_RADIO"
-		(at 64.77 195.58 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "d105966c-1fde-4700-953b-4208d6ec1b46")
 	)
 	(label "RX_RADIO"
 		(at 129.286 116.84 180)
@@ -10072,6 +9739,17 @@
 			(justify right bottom)
 		)
 		(uuid "fd827aaa-a510-4d56-8896-fe85ae71615b")
+	)
+	(label "TX_RADIO"
+		(at 64.77 195.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ffac509a-6561-4fe4-8bd4-96819ff86dab")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10366,7 +10044,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "CD-PA1616D:XCVR_CD-PA1616D"
 			(at 340.36 107.95 0)
 			(effects
 				(font
@@ -10426,7 +10104,7 @@
 		(pin "20"
 			(uuid "7aeebe36-92b0-4e80-aa01-c8101209a214")
 		)
-		(pin "20"
+		(pin "19"
 			(uuid "6f05a212-b17b-4d78-b2a1-bf40ce8ce659")
 		)
 		(pin "3"
@@ -10681,7 +10359,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "To Motor Board"
+		(property "Value" "FC_M/P"
 			(at 47.244 203.962 0)
 			(effects
 				(font
@@ -10690,7 +10368,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_FFC-FPC:Molex_200528-0080_1x08-1MP_P1.00mm_Horizontal"
 			(at 53.34 190.5 0)
 			(effects
 				(font
@@ -10990,7 +10668,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
 			(at 375.92 39.37 0)
 			(effects
 				(font
@@ -13339,142 +13017,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 289.56 118.11 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "52874972-fd3f-4e4d-936b-072df2beb0d2")
-		(property "Reference" "#PWR09"
-			(at 283.21 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 284.48 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Footprint" ""
-			(at 289.56 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 289.56 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 289.56 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2d6c11d1-3fba-4264-9627-c0343799ef0f")
-		)
-		(instances
-			(project "ARES_FC"
-				(path "/449acbee-2eeb-4316-a8e9-c26dd430524e"
-					(reference "#PWR09")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:Battery")
-		(at 297.18 118.11 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5562fe58-feb0-44e1-96aa-9001ba68e39b")
-		(property "Reference" "BT1"
-			(at 295.148 120.142 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "Battery"
-			(at 301.244 114.3 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Battery:BatteryHolder_Keystone_103_1x20mm"
-			(at 295.656 118.11 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 295.656 118.11 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Multiple-cell battery"
-			(at 297.18 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "e1dd8661-86d4-4aad-88bf-d5db1c1f470b")
-		)
-		(pin "1"
-			(uuid "f78c394e-f5fd-4e1a-8792-d7fa92860ac1")
-		)
-		(instances
-			(project "ARES_FC"
-				(path "/449acbee-2eeb-4316-a8e9-c26dd430524e"
-					(reference "BT1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:VBUS")
 		(at 204.978 28.194 0)
 		(unit 1)
@@ -14091,84 +13633,6 @@
 			(project "ARES_FC"
 				(path "/449acbee-2eeb-4316-a8e9-c26dd430524e"
 					(reference "C12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 306.07 123.19 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6903a4fc-6f34-427a-b858-5dc128e68981")
-		(property "Reference" "C22"
-			(at 301.752 120.904 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100nF"
-			(at 299.72 125.476 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 307.0352 127 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 306.07 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 306.07 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "LCSC Part" "C307331"
-			(at 306.07 123.19 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e351e697-3fe3-4be2-9ae2-aac30b2a6bd3")
-		)
-		(pin "2"
-			(uuid "c8e503c8-5c91-4d3a-baab-cf11a13925e5")
-		)
-		(instances
-			(project "ARES_FC"
-				(path "/449acbee-2eeb-4316-a8e9-c26dd430524e"
-					(reference "C22")
 					(unit 1)
 				)
 			)
@@ -15498,7 +14962,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
 			(at 375.92 48.26 0)
 			(effects
 				(font
@@ -15909,8 +15373,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "To Motor Board"
-			(at 72.644 203.962 0)
+		(property "Value" "FC_RF"
+			(at 72.39 203.962 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15918,7 +15382,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Connector_FFC-FPC:Molex_200528-0080_1x08-1MP_P1.00mm_Horizontal"
 			(at 78.74 190.5 0)
 			(effects
 				(font
@@ -16791,7 +16255,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
 			(at 375.6943 67.4505 0)
 			(effects
 				(font
@@ -18319,10 +17783,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "eb7bf4c4-72f6-4776-9b06-d9beaa62855a")
 		(property "Reference" "C18"
-			(at 358.648 198.6112 90)
+			(at 358.394 208.28 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18874,7 +18337,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+		(property "Footprint" "MountingHole:MountingHole_2.2mm_M2"
 			(at 375.92 58.42 0)
 			(effects
 				(font
