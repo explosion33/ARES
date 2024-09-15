@@ -4432,6 +4432,12 @@
 		(uuid "8411c2ae-4a38-4402-9fc6-216a5374d2f8")
 	)
 	(junction
+		(at 226.06 137.16)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "86986b9c-ec93-40af-ab64-57d24df0d69d")
+	)
+	(junction
 		(at 43.942 35.56)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4634,10 +4640,6 @@
 		(uuid "b11768e5-0da6-4203-85f4-51cccf37f190")
 	)
 	(no_connect
-		(at 100.33 82.55)
-		(uuid "bdf6b315-ffe0-49d0-90cf-14e4a12d8315")
-	)
-	(no_connect
 		(at 67.31 55.88)
 		(uuid "c743f967-7339-4292-bb52-b7b51073ebf1")
 	)
@@ -4664,10 +4666,6 @@
 	(no_connect
 		(at 100.33 105.41)
 		(uuid "eef15d4d-61dc-43bb-8314-2425169d6405")
-	)
-	(no_connect
-		(at 100.33 80.01)
-		(uuid "f6afb2f6-8d6f-40ba-8e47-995d1feead43")
 	)
 	(no_connect
 		(at 67.31 72.39)
@@ -4909,6 +4907,16 @@
 	)
 	(wire
 		(pts
+			(xy 113.03 80.01) (xy 100.33 80.01)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "143c2b1e-614d-48c7-8d26-ee43ea2ca52d")
+	)
+	(wire
+		(pts
 			(xy 29.21 88.9) (xy 29.21 91.44)
 		)
 		(stroke
@@ -4966,6 +4974,16 @@
 			(type default)
 		)
 		(uuid "28b91426-48de-411d-9d89-84851565e148")
+	)
+	(wire
+		(pts
+			(xy 236.22 137.16) (xy 234.95 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "294f4b57-0d07-429e-a04d-3343fa076549")
 	)
 	(wire
 		(pts
@@ -5216,6 +5234,16 @@
 			(type default)
 		)
 		(uuid "4897e0db-6bd5-4024-a5fb-a2a2f3c70e5a")
+	)
+	(wire
+		(pts
+			(xy 226.06 137.16) (xy 227.33 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48feddf6-e98a-4161-8427-1409f6a1c788")
 	)
 	(polyline
 		(pts
@@ -5979,6 +6007,16 @@
 	)
 	(wire
 		(pts
+			(xy 224.79 137.16) (xy 226.06 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bb45bef1-600e-49c9-a31d-3b173a4a9e58")
+	)
+	(wire
+		(pts
 			(xy 48.26 73.66) (xy 45.72 73.66)
 		)
 		(stroke
@@ -6079,6 +6117,16 @@
 	)
 	(wire
 		(pts
+			(xy 226.06 137.16) (xy 226.06 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c6b491df-7244-4844-9709-3d6b9fe77f04")
+	)
+	(wire
+		(pts
 			(xy 56.642 22.86) (xy 69.342 22.86)
 		)
 		(stroke
@@ -6166,6 +6214,16 @@
 			(type default)
 		)
 		(uuid "da1f6241-f488-401f-8231-89df7a9da616")
+	)
+	(wire
+		(pts
+			(xy 100.33 82.55) (xy 113.03 82.55)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dad62977-c4cf-4b20-9e1c-fed637f391b0")
 	)
 	(wire
 		(pts
@@ -6379,6 +6437,16 @@
 	)
 	(wire
 		(pts
+			(xy 208.28 142.24) (xy 226.06 142.24)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ed5e27fa-8800-4708-8dcc-bc353f69bd03")
+	)
+	(wire
+		(pts
 			(xy 267.97 93.98) (xy 271.78 93.98)
 		)
 		(stroke
@@ -6532,6 +6600,18 @@
 		(uuid 315c893b-2f5e-4f78-9bad-cc15bb9e145b)
 	)
 	(rectangle
+		(start 198.374 121.412)
+		(end 252.73 149.352)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 50a64e5f-67ad-421a-8559-3f2571ea77a8)
+	)
+	(rectangle
 		(start 254.508 137.16)
 		(end 281.94 164.846)
 		(stroke
@@ -6566,6 +6646,31 @@
 		)
 		(uuid "03334382-691a-4784-a8d4-554cdf41c99d")
 	)
+	(text "*Calculated based off of 3S 18650 pack\n18650: 2.5V ->  4.2V  |  12.6v -> 3.198v\npack : 7.5V -> 12.6v  |   7.5v -> 1.904v\n\nADC range is 0v -> 3.3v"
+		(exclude_from_sim no)
+		(at 199.136 132.588 0)
+		(effects
+			(font
+				(face "Courier New")
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "4faef1ba-6fe8-4407-8db4-fbe3f469ed71")
+	)
+	(text "*Need to test LM2576 voltage stability under ext. motor load,\n and heavy downstream load\n \n If needed, we may need to create a seperate power source for\n VREF+. Not sure how, but we could use a LM2576-5V then use\n a cheap 3.3V LDO and a high precsision one"
+		(exclude_from_sim no)
+		(at 133.096 26.67 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "6e330e04-7575-4aa0-a14d-e2f605b6148d")
+	)
 	(text "Battery Connector"
 		(exclude_from_sim no)
 		(at 255.524 133.858 0)
@@ -6576,6 +6681,17 @@
 			(justify left bottom)
 		)
 		(uuid "877b8171-cdc7-411d-bfdb-40ad702bd020")
+	)
+	(text "Battery Voltage Measure"
+		(exclude_from_sim no)
+		(at 199.39 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "9159651d-922f-484a-a8a4-739b3394bf3e")
 	)
 	(text "VDDA Filtering"
 		(exclude_from_sim no)
@@ -6664,6 +6780,17 @@
 			(justify right bottom)
 		)
 		(uuid "176f0c14-c187-4995-bff2-458d797ab2fe")
+	)
+	(label "VBatt_sense"
+		(at 208.28 142.24 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1ab99312-0923-4cb8-8381-c31d2147c1ba")
 	)
 	(label "SWDIO"
 		(at 234.95 160.02 0)
@@ -6763,6 +6890,17 @@
 			(justify right bottom)
 		)
 		(uuid "74c98dbd-4385-4b44-bfa4-5ae71d5c6122")
+	)
+	(label "VBatt_sense"
+		(at 113.03 80.01 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "85681b99-f89e-4cff-b750-19cb640d1771")
 	)
 	(label "LED_B"
 		(at 16.764 144.78 0)
@@ -7565,6 +7703,73 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+BATT")
+		(at 217.17 137.16 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "11618452-3a7f-4d44-ad0d-2ceaa9a5ea22")
+		(property "Reference" "#PWR037"
+			(at 220.98 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+BATT"
+			(at 213.995 137.16 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 217.17 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 217.17 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+BATT\""
+			(at 217.17 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "78f5cf5e-4681-41e5-9969-dba19d65a7fc")
+		)
+		(instances
+			(project "motor_control_design"
+				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
+					(reference "#PWR037")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:Conn_01x04_Male")
 		(at 247.142 160.02 180)
 		(unit 1)
@@ -7635,6 +7840,73 @@
 			(project "motor_control_design"
 				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 236.22 137.16 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "1518d541-eee1-4621-b844-c55ec6c03386")
+		(property "Reference" "#PWR038"
+			(at 242.57 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 241.3 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 236.22 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0711769d-cbea-4c22-9d13-a0451a871d33")
+		)
+		(instances
+			(project "motor_control_design"
+				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
+					(reference "#PWR038")
 					(unit 1)
 				)
 			)
@@ -9500,6 +9772,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 113.03 82.55 270)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6702311e-1e58-4063-aaa5-ad612ecc34ef")
+		(property "Reference" "#PWR039"
+			(at 109.22 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 116.84 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 113.03 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 113.03 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 113.03 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "41b9319b-b20c-4d38-9cd1-57c631f4ceb0")
+		)
+		(instances
+			(project "motor_control_design"
+				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
+					(reference "#PWR039")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3VA")
 		(at 88.9 20.32 0)
 		(unit 1)
@@ -10589,6 +10927,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 220.98 137.16 90)
+		(mirror x)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8f372cc5-dbe1-416e-af13-c83648174b71")
+		(property "Reference" "R11"
+			(at 220.98 139.446 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "29.4k"
+			(at 220.98 137.16 90)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 220.98 135.382 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 220.98 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 220.98 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C25906"
+			(at 220.98 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7a016a09-5d55-47d5-ba58-a5a96a7f50fc")
+		)
+		(pin "2"
+			(uuid "d54ce276-9884-4f3f-9b12-4cee96b68ac8")
+		)
+		(instances
+			(project "motor_control_design"
+				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
+					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 94.488 27.94 0)
 		(unit 1)
@@ -10729,6 +11144,82 @@
 			(project "motor_control_design"
 				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
 					(reference "#PWR029")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 231.14 137.16 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "92f3fe45-413d-45f1-a2e6-ab2867872349")
+		(property "Reference" "R12"
+			(at 231.14 134.874 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "10k"
+			(at 231.14 137.16 90)
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 231.14 138.938 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 231.14 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 231.14 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C25906"
+			(at 231.14 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5068c34f-3005-4694-9ac1-d7494c6dc646")
+		)
+		(pin "2"
+			(uuid "ca2ec5fe-ee45-4480-b13a-5d93221b987b")
+		)
+		(instances
+			(project "motor_control_design"
+				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
+					(reference "R12")
 					(unit 1)
 				)
 			)
