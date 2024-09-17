@@ -1,0 +1,5 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "USBC")(type "KiCad")(uri "${KIPRJMOD}/Components/USBC")(options "")(descr ""))
+  (lib (name "JST-XH-SMD")(type "KiCad")(uri "${KIPRJMOD}/Components/JST/KiCADv6")(options "")(descr ""))
+)
