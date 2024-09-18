@@ -14,12 +14,12 @@ int main() {
     DigitalOut Q1(PA_0);
     DigitalOut Q2(PA_1);
     DigitalOut Q3(PA_4);
-    DigitalOut Q4(PB_0);
+    DigitalInOut Q4(PB_0);
 
     Q1 = 0;
     Q2 = 0;
     Q3 = 0;
-    Q4 = 0;
+    Q4.input();
 
     printf("start\n");
     DigitalIn btn(PC_13);
@@ -37,12 +37,13 @@ int main() {
             Q1 = 0;
             Q2 = 0;
             Q3 = 0;
-            Q4 = 0;
+            Q4.input();
             ThisThread::sleep_for(1ms);
 
             if (dir) {
                 Q1 = 1;
-                Q4 = 1;
+                Q4.output();
+                Q4 = 0;
             }
             else {
                 Q2 = 1;
