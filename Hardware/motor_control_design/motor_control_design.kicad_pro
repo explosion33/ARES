@@ -480,15 +480,15 @@
   },
   "pcbnew": {
     "last_paths": {
-      "gencad": "",
+      "gencad": "../../../../../../../Downloads/motor_control_design.cad",
       "idf": "",
       "netlist": "",
       "plot": "",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "../../../../../../../Downloads/motor_control_design.step",
       "svg": "",
-      "vrml": ""
+      "vrml": "../../../../../../../Downloads/motor_control_design.wrl"
     },
     "page_layout_descr_file": ""
   },

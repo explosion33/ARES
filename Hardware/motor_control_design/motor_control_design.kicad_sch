@@ -8384,6 +8384,16 @@
 		)
 		(uuid "34d7f745-650a-4560-a0f5-6cc8ba3908ba")
 	)
+	(text "* Verify MOSFET configuration and test w/ actual encoder"
+		(exclude_from_sim no)
+		(at 228.092 45.72 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "3e16a6cf-dc86-4826-866d-289b8464f4f9")
+	)
 	(text "Motor Connector 1"
 		(exclude_from_sim no)
 		(at 134.366 66.04 0)
@@ -9281,6 +9291,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C124378"
+			(at 275.59 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "fac0e638-ae3c-4cde-b31b-8a814c74fa2d")
 		)
@@ -9435,7 +9454,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C11702"
+		(property "LCSC Part" "C102758"
 			(at 156.21 27.94 0)
 			(effects
 				(font
@@ -10147,7 +10166,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 30.48 149.86 0)
 			(effects
 				(font
@@ -10569,7 +10588,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C11702"
+		(property "LCSC Part" "C102758"
 			(at 156.21 17.78 0)
 			(effects
 				(font
@@ -10845,6 +10864,15 @@
 			)
 		)
 		(property "Description" "47A Id, 55V Vds, 22mOhm Rds Single N-Channel HEXFET Power MOSFET, TO-220AB"
+			(at 146.05 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" " C538199"
 			(at 146.05 167.64 0)
 			(effects
 				(font
@@ -11260,7 +11288,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 153.67 149.86 0)
 			(effects
 				(font
@@ -11334,6 +11362,15 @@
 			)
 		)
 		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 162.56 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C466660"
 			(at 162.56 83.82 0)
 			(effects
 				(font
@@ -11698,6 +11735,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C466660"
+			(at 162.56 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f676184c-307c-43c9-86f7-aacff3f9f602")
 		)
@@ -11912,6 +11958,15 @@
 			)
 		)
 		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
+			(at 185.42 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C466660"
 			(at 185.42 49.53 0)
 			(effects
 				(font
@@ -12263,7 +12318,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C11702"
+		(property "LCSC Part" "C102758"
 			(at 157.48 43.18 0)
 			(effects
 				(font
@@ -12342,7 +12397,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 30.48 171.45 0)
 			(effects
 				(font
@@ -12415,6 +12470,15 @@
 			)
 		)
 		(property "Description" "47A Id, 55V Vds, 22mOhm Rds Single N-Channel HEXFET Power MOSFET, TO-220AB"
+			(at 118.11 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" " C538199"
 			(at 118.11 167.64 0)
 			(effects
 				(font
@@ -12858,6 +12922,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" " C33903"
+			(at 146.05 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "ff4f1bdd-ad3d-4be9-a811-2adc76bb1e9e")
 		)
@@ -13283,6 +13356,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" " C33903"
+			(at 66.04 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "b36b001f-5b04-48e0-9d3e-15311c60979e")
 		)
@@ -13351,6 +13433,15 @@
 			)
 		)
 		(property "Description" "47A Id, 55V Vds, 22mOhm Rds Single N-Channel HEXFET Power MOSFET, TO-220AB"
+			(at 66.04 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" " C538199"
 			(at 66.04 167.64 0)
 			(effects
 				(font
@@ -13699,7 +13790,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C11702"
+		(property "LCSC Part" "C102758"
 			(at 180.34 77.47 0)
 			(effects
 				(font
@@ -13776,7 +13867,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C25906"
+		(property "LCSC Part" "C174364"
 			(at 54.61 97.79 0)
 			(effects
 				(font
@@ -14185,7 +14276,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C25906"
+		(property "LCSC Part" "C174364"
 			(at 54.61 100.33 0)
 			(effects
 				(font
@@ -14410,7 +14501,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 96.52 149.86 0)
 			(effects
 				(font
@@ -14623,7 +14714,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 73.66 149.86 0)
 			(effects
 				(font
@@ -14980,7 +15071,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C176114"
 			(at 55.88 48.26 0)
 			(effects
 				(font
@@ -15537,6 +15628,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C466660"
+			(at 22.86 151.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fdc9b92d-a3dd-4d2c-be7d-f87291a95b63")
 		)
@@ -15608,7 +15708,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C25906"
+		(property "LCSC Part" "C162880"
 			(at 220.98 137.16 0)
 			(effects
 				(font
@@ -15896,7 +15996,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C25906"
+		(property "LCSC Part" "C176114"
 			(at 231.14 137.16 0)
 			(effects
 				(font
@@ -16175,7 +16275,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C11702"
+		(property "LCSC Part" "C102758"
 			(at 157.48 77.47 0)
 			(effects
 				(font
@@ -16402,7 +16502,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 153.67 171.45 0)
 			(effects
 				(font
@@ -16702,6 +16802,15 @@
 		)
 		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
 			(at 162.56 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C466660"
+			(at 162.56 151.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17138,7 +17247,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C11702"
+		(property "LCSC Part" "C102758"
 			(at 180.34 43.18 0)
 			(effects
 				(font
@@ -17783,6 +17892,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C466660"
+			(at 102.87 151.13 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "894f26fa-1214-4e72-add1-dd26c20058d6")
 		)
@@ -17855,7 +17973,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 168.91 149.86 0)
 			(effects
 				(font
@@ -17928,6 +18046,15 @@
 			)
 		)
 		(property "Description" "47A Id, 55V Vds, 22mOhm Rds Single N-Channel HEXFET Power MOSFET, TO-220AB"
+			(at 38.1 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" " C538199"
 			(at 38.1 167.64 0)
 			(effects
 				(font
@@ -18012,6 +18139,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C466660"
+			(at 185.42 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d9406666-283d-429d-895b-13a5842bb68a")
 		)
@@ -18081,6 +18217,15 @@
 		)
 		(property "Description" "0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23"
 			(at 82.55 151.13 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C466660"
+			(at 82.55 151.13 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18160,7 +18305,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C11702"
+		(property "LCSC Part" "C102758"
 			(at 156.21 22.86 0)
 			(effects
 				(font
@@ -18239,7 +18384,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 16.51 149.86 0)
 			(effects
 				(font
@@ -18318,6 +18463,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C347414"
+			(at 232.41 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "5"
 			(uuid "52925e5f-505e-4f60-87fe-ff4c5d7cc45e")
 		)
@@ -18337,6 +18491,73 @@
 			(project "motor_control_design"
 				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 248.92 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "d763c4e8-2aaa-4b8e-a6ff-ee47575b705c")
+		(property "Reference" "#PWR049"
+			(at 248.92 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 248.92 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 248.92 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 248.92 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 248.92 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7b0d4ca6-9f8f-4e4e-a3e8-e61513e3b139")
+		)
+		(instances
+			(project "motor_control_design"
+				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
+					(reference "#PWR049")
 					(unit 1)
 				)
 			)
@@ -18526,6 +18747,15 @@
 			)
 		)
 		(property "Description" "-74A Id, -55V Vds, Single P-Channel HEXFET Power MOSFET, 20mOhm Ron, TO-220AB"
+			(at 118.11 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" " C33903"
 			(at 118.11 153.67 0)
 			(effects
 				(font
@@ -18750,7 +18980,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 88.9 149.86 0)
 			(effects
 				(font
@@ -18828,7 +19058,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 110.49 149.86 0)
 			(effects
 				(font
@@ -19264,6 +19494,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" " C33903"
+			(at 38.1 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "69138edd-7c33-4da7-9a91-942ad47f048f")
 		)
@@ -19336,7 +19575,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 73.66 171.45 0)
 			(effects
 				(font
@@ -19415,7 +19654,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C60490"
+		(property "LCSC Part" "C102758"
 			(at 110.49 171.45 0)
 			(effects
 				(font
