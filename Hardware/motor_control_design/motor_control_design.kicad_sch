@@ -9222,6 +9222,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C3032484"
+			(at 124.46 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8565a4e1-b100-46c1-ac43-68a47a7a00fe")
 		)
@@ -9291,7 +9300,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C124378"
+		(property "LCSC Part" "C132510"
 			(at 275.59 148.59 0)
 			(effects
 				(font
@@ -9743,7 +9752,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C273598"
+		(property "LCSC Part" "C2286"
 			(at 146.05 27.94 0)
 			(effects
 				(font
@@ -10052,7 +10061,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "330uF"
+		(property "Value" "1000uF"
 			(at 259.334 100.33 0)
 			(effects
 				(font
@@ -10061,7 +10070,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_10x10.5"
 			(at 263.8552 101.6 0)
 			(effects
 				(font
@@ -10088,7 +10097,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C19702"
+		(property "LCSC Part" "C189257"
 			(at 262.89 105.41 0)
 			(effects
 				(font
@@ -10799,6 +10808,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C3032484"
+			(at 59.69 166.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6d0f61d8-7847-4a77-ae79-42ac3477cc83")
 		)
@@ -10947,6 +10965,15 @@
 		)
 		(property "Description" "40V 3A Schottky Diode, SMA"
 			(at 44.45 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C3032484"
+			(at 44.45 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11445,6 +11472,15 @@
 		)
 		(property "Description" "40V 3A Schottky Diode, SMA"
 			(at 124.46 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C3032484"
+			(at 124.46 166.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12115,6 +12151,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C3032484"
+			(at 139.7 153.67 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "397ffac9-cffb-49c7-9250-fefd9e3441b8")
 		)
@@ -12705,6 +12750,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C3032484"
+			(at 44.45 166.37 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6edb2a04-7818-4b00-86c7-f19e92541f28")
 		)
@@ -12976,7 +13030,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 212.3948 99.06 0)
 			(effects
 				(font
@@ -13003,7 +13057,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C19702"
+		(property "LCSC Part" "C141660"
 			(at 213.36 102.87 0)
 			(effects
 				(font
@@ -13075,6 +13129,15 @@
 		)
 		(property "Description" "40V 3A Schottky Diode, SMA"
 			(at 248.92 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C3032484"
+			(at 248.92 105.41 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14404,7 +14467,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_12x12mm_H4.5mm"
+		(property "Footprint" "Inductor_SMD:L_TaiTech_TMPC1265_13.5x12.5mm"
 			(at 255.27 101.6 0)
 			(effects
 				(font
@@ -14424,6 +14487,15 @@
 		)
 		(property "Description" "Inductor"
 			(at 255.27 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C408533"
+			(at 255.27 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14928,6 +15000,15 @@
 		)
 		(property "Description" "40V 3A Schottky Diode, SMA"
 			(at 59.69 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C3032484"
+			(at 59.69 153.67 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15547,7 +15628,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C273598"
+		(property "LCSC Part" "C131286"
 			(at 146.05 17.78 0)
 			(effects
 				(font
@@ -16890,7 +16971,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C273598"
+		(property "LCSC Part" "C779453"
 			(at 146.05 22.86 0)
 			(effects
 				(font
@@ -17465,6 +17546,15 @@
 		)
 		(property "Description" "40V 3A Schottky Diode, SMA"
 			(at 139.7 166.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C3032484"
+			(at 139.7 166.37 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18463,7 +18553,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C347414"
+		(property "LCSC Part" " C347412"
 			(at 232.41 99.06 0)
 			(effects
 				(font

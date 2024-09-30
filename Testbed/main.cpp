@@ -10,7 +10,7 @@
 char buf[50] = {0};
 int index = 0;
 
-int main() {
+void brushed() {
     USBSerial pc(false, 0x1F00, 0x2012);
     ThisThread::sleep_for(2s);
     pc.printf("start\n");
@@ -84,4 +84,20 @@ int main() {
         }
     }
 
+}
+
+void brushless() {
+    PwmOut esc(PB_1);
+
+    esc.period_ms(20);
+    esc.pulsewidth_ms(1);
+
+    ThisThread::sleep_for(1s);
+    esc.pulsewidth_us(1050);
+
+    while (true) {}
+}
+
+int main() {
+    brushless();
 }
