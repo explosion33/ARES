@@ -10463,6 +10463,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C505273"
+			(at 53.34 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "4"
 			(uuid "0f6c6cc1-e730-4731-9cc3-6f6a30d2a56a")
 		)
@@ -11511,7 +11520,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C25906"
+		(property "LCSC Part" "C119339"
 			(at 73.66 114.3 0)
 			(effects
 				(font
@@ -13463,6 +13472,15 @@
 			)
 		)
 		(property "Description" ""
+			(at 252.73 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C3025061"
 			(at 252.73 113.03 0)
 			(effects
 				(font
@@ -15469,6 +15487,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 78.74 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C505273"
 			(at 78.74 190.5 0)
 			(effects
 				(font
@@ -17742,7 +17769,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C25906"
+		(property "LCSC Part" "C119339"
 			(at 73.66 111.76 0)
 			(effects
 				(font
@@ -18276,6 +18303,15 @@
 					(size 1.27 1.27)
 				)
 				(justify bottom)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C83291"
+			(at 334.01 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 				(hide yes)
 			)
 		)
