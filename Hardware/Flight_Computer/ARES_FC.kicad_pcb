@@ -1676,6 +1676,19 @@
 				)
 			)
 		)
+		(property "LCSC Part" "C5137195"
+			(at 0 0 0)
+			(unlocked yes)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c28a5236-e499-4d02-adc5-cbd4306a1edd")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
 		(path "/28610b34-c875-4e3f-8cad-e5ff8037c8c9")
 		(sheetname "Root")
 		(sheetfile "ARES_FC.kicad_sch")
