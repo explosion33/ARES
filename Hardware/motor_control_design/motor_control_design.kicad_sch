@@ -4967,12 +4967,6 @@
 		(uuid "2fc7aa63-a274-47f7-9249-3d309ea503ac")
 	)
 	(junction
-		(at 22.86 115.57)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "3125f52f-65c0-4a21-b133-7b26876daa69")
-	)
-	(junction
 		(at 44.45 148.59)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6004,16 +5998,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 115.57) (xy 22.86 118.11)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3bfc5355-08ab-4425-8d8e-b09c698f4ca6")
-	)
-	(wire
-		(pts
 			(xy 73.66 153.67) (xy 71.12 153.67)
 		)
 		(stroke
@@ -6411,16 +6395,6 @@
 			(type default)
 		)
 		(uuid "5afb5a60-62d6-4d14-9a25-61be9905ecdc")
-	)
-	(wire
-		(pts
-			(xy 22.86 115.57) (xy 35.56 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5b714c6e-ffe3-45be-a51c-294c3a98276f")
 	)
 	(wire
 		(pts
@@ -7164,16 +7138,6 @@
 	)
 	(wire
 		(pts
-			(xy 22.86 111.76) (xy 22.86 115.57)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e8ea2ac-e41f-46d1-a996-1bdd49546306")
-	)
-	(wire
-		(pts
 			(xy 69.342 25.4) (xy 69.342 22.86)
 		)
 		(stroke
@@ -7791,16 +7755,6 @@
 			(type default)
 		)
 		(uuid "db1c4160-687f-47ff-aaa3-586c51545e96")
-	)
-	(wire
-		(pts
-			(xy 35.56 111.76) (xy 22.86 111.76)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "db541543-665a-45df-9a4f-b090e558b2a1")
 	)
 	(polyline
 		(pts
@@ -8826,17 +8780,6 @@
 		)
 		(uuid "72a955d4-5db2-477a-a38c-217f724d7ce4")
 	)
-	(label "MOTOR_SDA"
-		(at 35.56 111.76 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "74c98dbd-4385-4b44-bfa4-5ae71d5c6122")
-	)
 	(label "SWCLK"
 		(at 107.95 113.03 180)
 		(fields_autoplaced yes)
@@ -9122,17 +9065,6 @@
 			(justify left bottom)
 		)
 		(uuid "ee25c2fd-ee60-4a57-9168-de591a8e2549")
-	)
-	(label "MOTOR_SCL"
-		(at 35.56 115.57 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "f06685ec-5e67-4b11-b3c4-ee732a4a5da8")
 	)
 	(label "E2A"
 		(at 107.95 92.71 180)
@@ -13223,73 +13155,6 @@
 			(project "motor_control_design"
 				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
 					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "+3.3V_1")
-		(lib_id "power:+3.3V")
-		(at 22.86 118.11 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "45b50c6e-226c-477b-a325-a1f67b371b3f")
-		(property "Reference" "#PWR02"
-			(at 22.86 114.3 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 22.86 122.2431 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 22.86 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 22.86 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 22.86 118.11 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b8900a2d-89e8-4b5f-891e-3d79098ab483")
-		)
-		(instances
-			(project "motor_control_design"
-				(path "/e96577c4-ec21-4b26-996c-9ebc38d9c737"
-					(reference "#PWR02")
 					(unit 1)
 				)
 			)
