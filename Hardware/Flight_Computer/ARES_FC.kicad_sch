@@ -9353,16 +9353,6 @@
 		)
 		(uuid db37dc1d-bd1f-402f-a634-77a2dd84f57c)
 	)
-	(text "double-check FB"
-		(exclude_from_sim no)
-		(at 290.83 101.6 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-		(uuid "11ebf991-e1c0-463a-84dd-d4706f9c7429")
-	)
 	(text "VDDA Filtering"
 		(exclude_from_sim no)
 		(at 110.998 34.29 0)
