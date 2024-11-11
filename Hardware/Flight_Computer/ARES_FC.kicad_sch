@@ -6367,7 +6367,7 @@
 	)
 	(wire
 		(pts
-			(xy 323.85 113.03) (xy 332.74 113.03)
+			(xy 321.31 113.03) (xy 332.74 113.03)
 		)
 		(stroke
 			(width 0)
@@ -6944,6 +6944,16 @@
 			(type default)
 		)
 		(uuid "3ab48156-b3cf-4372-95a9-92948525be69")
+	)
+	(wire
+		(pts
+			(xy 76.2 109.22) (xy 86.36 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3b4dcf41-9eea-41e3-af88-baa70e558021")
 	)
 	(wire
 		(pts
@@ -7584,16 +7594,6 @@
 			(type default)
 		)
 		(uuid "71e84ee4-f4bb-4f3b-8725-99949f449592")
-	)
-	(wire
-		(pts
-			(xy 76.2 109.22) (xy 86.36 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7322782f-2d39-4612-ba2c-578ecbfca96f")
 	)
 	(wire
 		(pts
@@ -9498,17 +9498,6 @@
 		)
 		(uuid "ddfbf61f-20b9-40ad-8676-0a9cedacb040")
 	)
-	(label "GPS_NRST"
-		(at 76.2 109.22 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "112ed1f7-e848-4518-852f-119159e6f59b")
-	)
 	(label "USB_D-"
 		(at 128.778 119.38 180)
 		(fields_autoplaced yes)
@@ -9532,13 +9521,13 @@
 		(uuid "14d8563a-d86b-4889-8873-aa1a4f5d5166")
 	)
 	(label "GPS_NRST"
-		(at 331.47 113.03 180)
+		(at 321.31 113.03 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
 		(uuid "152a1db8-380c-46dc-b618-b0ee1e82d3fb")
 	)
@@ -9992,6 +9981,17 @@
 			(justify left bottom)
 		)
 		(uuid "a8df6fcf-3350-41c0-a697-3192e5f40628")
+	)
+	(label "GPS_NRST"
+		(at 76.2 109.22 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "aff3aca9-8b37-42e3-832a-6f2b0088792c")
 	)
 	(label "SDA"
 		(at 241.3 160.02 0)
@@ -10968,7 +10968,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C505273"
+		(property "LCSC Part" "C132510"
 			(at 53.34 190.5 0)
 			(effects
 				(font
@@ -11136,6 +11136,15 @@
 		)
 		(property "Description" "Antenna"
 			(at 373.38 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C5137195"
+			(at 373.38 133.35 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14671,15 +14680,15 @@
 		(fields_autoplaced yes)
 		(uuid "73ec1c8c-2771-476b-a335-64384616b355")
 		(property "Reference" "FB2"
-			(at 294.6019 105.0884 90)
+			(at 294.6019 104.14 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "120R"
-			(at 294.6019 107.6253 90)
+		(property "Value" "600R"
+			(at 294.6019 106.68 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14713,7 +14722,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C85831"
+		(property "LCSC Part" "C88976"
 			(at 294.64 110.49 0)
 			(effects
 				(font
@@ -16151,7 +16160,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C505273"
+		(property "LCSC Part" "C132510"
 			(at 78.74 190.5 0)
 			(effects
 				(font
