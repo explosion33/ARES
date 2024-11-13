@@ -10635,7 +10635,16 @@
 				(hide yes)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "GPS Module"
+			(at 340.36 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C9900146965"
 			(at 340.36 107.95 0)
 			(effects
 				(font
@@ -11064,7 +11073,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C273598"
+		(property "LCSC Part" "C2290"
 			(at 313.69 125.73 0)
 			(effects
 				(font
@@ -11381,7 +11390,7 @@
 		(dnp no)
 		(uuid "2a214da4-ce21-4db5-892a-d4de1b3ff900")
 		(property "Reference" "R10"
-			(at 330.454 128.778 90)
+			(at 330.962 126.746 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11389,7 +11398,7 @@
 			)
 		)
 		(property "Value" "470"
-			(at 331.47 130.81 90)
+			(at 330.962 128.778 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11423,7 +11432,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C11702"
+		(property "LCSC Part" "0402WGJ0471TCE "
 			(at 331.47 130.81 0)
 			(effects
 				(font
@@ -12992,7 +13001,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 38.5572 46.99 0)
 			(effects
 				(font
@@ -14368,7 +14377,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C273598"
+		(property "LCSC Part" "C12624"
 			(at 132.588 182.88 0)
 			(effects
 				(font
@@ -14866,7 +14875,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C273598"
+		(property "LCSC Part" "C12624"
 			(at 232.918 33.274 0)
 			(effects
 				(font
@@ -15508,6 +15517,15 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC Part" "C160390"
+			(at 252.73 160.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "61713ac1-4ba7-4921-bff6-38cf046397dc")
 		)
@@ -15583,7 +15601,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C273598"
+		(property "LCSC Part" "C2288"
 			(at 137.668 182.88 0)
 			(effects
 				(font
@@ -16490,7 +16508,7 @@
 		(dnp no)
 		(uuid "ac140dd9-11db-4d3f-9112-5be6d48c79ae")
 		(property "Reference" "R6"
-			(at 327.406 124.968 90)
+			(at 326.39 118.618 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16498,7 +16516,7 @@
 			)
 		)
 		(property "Value" "470"
-			(at 326.898 122.936 90)
+			(at 326.39 122.936 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16532,7 +16550,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C11702"
+		(property "LCSC Part" "0402WGJ0471TCE"
 			(at 326.39 120.65 0)
 			(effects
 				(font
@@ -16791,7 +16809,7 @@
 		(dnp no)
 		(uuid "af3f1c21-b4da-44e4-b37c-d66819968056")
 		(property "Reference" "R11"
-			(at 330.708 135.382 90)
+			(at 331.47 135.382 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16799,7 +16817,7 @@
 			)
 		)
 		(property "Value" "470"
-			(at 331.47 133.35 90)
+			(at 331.47 137.414 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16833,7 +16851,7 @@
 				(hide yes)
 			)
 		)
-		(property "LCSC Part" "C11702"
+		(property "LCSC Part" "0402WGJ0471TCE "
 			(at 331.47 133.35 0)
 			(effects
 				(font
@@ -17306,6 +17324,15 @@
 			)
 		)
 		(property "Description" "Generic connector, single row, 01x04, script generated"
+			(at 252.73 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "LCSC Part" "C160390"
 			(at 252.73 172.72 0)
 			(effects
 				(font
