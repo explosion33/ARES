@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/Users/jimmy/Documents/SARP/ARES/Hardware/Flight_Computer/ARES_FC.kicad_sch</source>
-    <date>2024-11-10T21:48:31-0600</date>
+    <date>2024-11-13T00:21:26-0600</date>
     <tool>Eeschema 8.0.4</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -29,11 +29,13 @@
       <footprint>Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</footprint>
       <description>Antenna</description>
       <fields>
+        <field name="LCSC Part">C5137195</field>
         <field name="Footprint">Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description">Antenna</field>
       </fields>
       <libsource lib="Device" part="Antenna" description="Antenna"/>
+      <property name="LCSC Part" value="C5137195"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="antenna"/>
@@ -78,10 +80,10 @@
     </comp>
     <comp ref="C4">
       <value>10uF</value>
-      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <footprint>Capacitor_SMD:C_0603_1608Metric</footprint>
       <fields>
         <field name="LCSC Part">C19702</field>
-        <field name="Footprint">Capacitor_SMD:C_0402_1005Metric</field>
+        <field name="Footprint">Capacitor_SMD:C_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
@@ -441,13 +443,13 @@
       <value>LED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <fields>
-        <field name="LCSC Part">C273598</field>
+        <field name="LCSC Part">C12624</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="LCSC Part" value="C273598"/>
+      <property name="LCSC Part" value="C12624"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
@@ -459,13 +461,13 @@
       <value>LED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <fields>
-        <field name="LCSC Part">C273598</field>
+        <field name="LCSC Part">C12624</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="LCSC Part" value="C273598"/>
+      <property name="LCSC Part" value="C12624"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
@@ -477,13 +479,13 @@
       <value>LED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <fields>
-        <field name="LCSC Part">C273598</field>
+        <field name="LCSC Part">C2288</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="LCSC Part" value="C273598"/>
+      <property name="LCSC Part" value="C2288"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
@@ -495,13 +497,13 @@
       <value>LED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <fields>
-        <field name="LCSC Part">C273598</field>
+        <field name="LCSC Part">C2290</field>
         <field name="Footprint">LED_SMD:LED_0603_1608Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
-      <property name="LCSC Part" value="C273598"/>
+      <property name="LCSC Part" value="C2290"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="LED diode"/>
@@ -658,13 +660,13 @@
       <footprint>Connector_FFC-FPC:Molex_200528-0080_1x08-1MP_P1.00mm_Horizontal</footprint>
       <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <fields>
-        <field name="LCSC Part">C505273</field>
+        <field name="LCSC Part">C132510</field>
         <field name="Footprint">Connector_FFC-FPC:Molex_200528-0080_1x08-1MP_P1.00mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description">Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="LCSC Part" value="C505273"/>
+      <property name="LCSC Part" value="C132510"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -709,13 +711,13 @@
       <footprint>Connector_FFC-FPC:Molex_200528-0080_1x08-1MP_P1.00mm_Horizontal</footprint>
       <description>Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <fields>
-        <field name="LCSC Part">C505273</field>
+        <field name="LCSC Part">C132510</field>
         <field name="Footprint">Connector_FFC-FPC:Molex_200528-0080_1x08-1MP_P1.00mm_Horizontal</field>
         <field name="Datasheet"/>
         <field name="Description">Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)</field>
       </fields>
       <libsource lib="Connector_Generic" part="Conn_01x08" description="Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="LCSC Part" value="C505273"/>
+      <property name="LCSC Part" value="C132510"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -728,11 +730,13 @@
       <footprint>Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical</footprint>
       <description>Generic connector, single row, 01x04, script generated</description>
       <fields>
+        <field name="LCSC Part">C160390</field>
         <field name="Footprint">Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description">Generic connector, single row, 01x04, script generated</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x04_Pin" description="Generic connector, single row, 01x04, script generated"/>
+      <property name="LCSC Part" value="C160390"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -745,11 +749,13 @@
       <footprint>Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical</footprint>
       <description>Generic connector, single row, 01x04, script generated</description>
       <fields>
+        <field name="LCSC Part">C160390</field>
         <field name="Footprint">Connector_JST:JST_SH_BM04B-SRSS-TB_1x04-1MP_P1.00mm_Vertical</field>
         <field name="Datasheet"/>
         <field name="Description">Generic connector, single row, 01x04, script generated</field>
       </fields>
       <libsource lib="Connector" part="Conn_01x04_Pin" description="Generic connector, single row, 01x04, script generated"/>
+      <property name="LCSC Part" value="C160390"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="connector"/>
@@ -851,13 +857,13 @@
       <value>470</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <fields>
-        <field name="LCSC Part">C11702</field>
+        <field name="LCSC Part">0402WGJ0471TCE</field>
         <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="LCSC Part" value="C11702"/>
+      <property name="LCSC Part" value="0402WGJ0471TCE"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -923,13 +929,13 @@
       <value>470</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <fields>
-        <field name="LCSC Part">C11702</field>
+        <field name="LCSC Part">0402WGJ0471TCE </field>
         <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="LCSC Part" value="C11702"/>
+      <property name="LCSC Part" value="0402WGJ0471TCE "/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -941,13 +947,13 @@
       <value>470</value>
       <footprint>Resistor_SMD:R_0402_1005Metric</footprint>
       <fields>
-        <field name="LCSC Part">C11702</field>
+        <field name="LCSC Part">0402WGJ0471TCE </field>
         <field name="Footprint">Resistor_SMD:R_0402_1005Metric</field>
         <field name="Datasheet"/>
         <field name="Description"/>
       </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="LCSC Part" value="C11702"/>
+      <property name="LCSC Part" value="0402WGJ0471TCE "/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <property name="ki_keywords" value="R res resistor"/>
@@ -1148,12 +1154,15 @@
     <comp ref="U6">
       <value>PA1616S</value>
       <footprint>CD-PA1616D:XCVR_CD-PA1616D</footprint>
+      <description>GPS Module</description>
       <fields>
+        <field name="LCSC Part">C9900146965</field>
         <field name="Footprint">CD-PA1616D:XCVR_CD-PA1616D</field>
         <field name="Datasheet"/>
-        <field name="Description"/>
+        <field name="Description">GPS Module</field>
       </fields>
       <libsource lib="PA1616D" part="PA1616D" description=""/>
+      <property name="LCSC Part" value="C9900146965"/>
       <property name="Sheetname" value="Root"/>
       <property name="Sheetfile" value="ARES_FC.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
