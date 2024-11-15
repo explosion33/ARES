@@ -68,7 +68,7 @@ end
 plot3(x_long, y_lat, alt, 'b.-') 
 xlabel('x distance (m)'); % longitudinal 
 ylabel('y distance (m)'); % lattitudinal
-zlabel('altitude (m)'); 
+zlabel('altitude (m)');   % verticaltudinal
 axis equal
 
 title('ARES 3D Flight Trajectory (GPS)')
