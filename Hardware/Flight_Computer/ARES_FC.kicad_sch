@@ -5852,6 +5852,12 @@
 		(uuid "1c11e088-14c8-4076-b97b-92f40ad50ae6")
 	)
 	(junction
+		(at 311.15 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1dced24e-2675-4bda-88ed-86fbfe09717f")
+	)
+	(junction
 		(at 346.456 204.47)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -6162,6 +6168,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f6019ca2-3ba0-4123-b6fb-1bf57546c8d7")
+	)
+	(junction
+		(at 306.07 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f7372e86-587b-432e-a018-5054ba58ac87")
 	)
 	(junction
 		(at 362.458 204.47)
@@ -6917,6 +6929,16 @@
 	)
 	(polyline
 		(pts
+			(xy 308.862 113.034) (xy 308.862 113.542)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "395d013e-c518-4820-9a96-e93f078b7944")
+	)
+	(polyline
+		(pts
 			(xy 183.134 202.438) (xy 183.134 243.078)
 		)
 		(stroke
@@ -7247,6 +7269,16 @@
 	)
 	(wire
 		(pts
+			(xy 306.07 110.49) (xy 311.15 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "59914ac4-e296-4e01-8d12-1ae3a0a7527e")
+	)
+	(wire
+		(pts
 			(xy 297.18 55.88) (xy 297.18 58.42)
 		)
 		(stroke
@@ -7374,6 +7406,16 @@
 			(type default)
 		)
 		(uuid "61c717cc-f85a-47ce-8850-717916599cb0")
+	)
+	(polyline
+		(pts
+			(xy 308.862 113.542) (xy 308.862 116.082)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "61f41e59-f1c7-418c-bbda-4bfbd8ed9329")
 	)
 	(wire
 		(pts
@@ -9323,6 +9365,32 @@
 		)
 		(uuid 4f2ecff4-e66b-4dbd-9831-581342f72fd9)
 	)
+	(arc
+		(start 307.848 114.054)
+		(mid 308.3372 113.5272)
+		(end 308.864 113.038)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 5e94706b-fd80-4f55-86ce-d0c14361a0ca)
+	)
+	(arc
+		(start 308.862 113.034)
+		(mid 309.3887 113.5233)
+		(end 309.878 114.05)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 6273634f-599b-4545-9ec2-eed4362dffd8)
+	)
 	(rectangle
 		(start 280.67 92.71)
 		(end 386.08 144.78)
@@ -9411,6 +9479,16 @@
 			)
 		)
 		(uuid "4dc02dac-a072-4b4e-8b2d-6f15afa80af4")
+	)
+	(text "V1 Prints don't have bridge"
+		(exclude_from_sim no)
+		(at 308.354 117.606 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "535891fe-992d-4ecc-95dc-543e7ec6dfac")
 	)
 	(text "1x 100nF per VDD pin"
 		(exclude_from_sim no)
@@ -17354,7 +17432,7 @@
 			(uuid "8b4281c7-26a9-478d-a505-8ac6d827587d")
 		)
 		(instances
-			(project ""
+			(project "ARES_FC"
 				(path "/449acbee-2eeb-4316-a8e9-c26dd430524e"
 					(reference "J7")
 					(unit 1)
