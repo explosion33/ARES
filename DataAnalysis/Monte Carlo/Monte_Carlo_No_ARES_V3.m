@@ -137,7 +137,7 @@ x = trajectory(:, 1) ./ 5280;
 y = trajectory(:, 2) ./ 5280;  
 z = trajectory(:, 3) ./ 5280;  
 
-% 3d trajectory plot for 5000th simuation 
+% 3d trajectory plot for final simulation 
 figure;                
 plot3(x, y, z, 'LineWidth', 2); 
 grid minor       
@@ -146,7 +146,7 @@ ylabel('Y (mi)')
 zlabel('Z (mi)')          
 title('3D Trajectory with no ARES')
 
-% wind direction data for 5000th simuation 
+% wind direction data for final simulation 
 figure;
 scatter(altitude_all, wind_theta, 8, 'filled') 
 grid minor
@@ -154,7 +154,7 @@ xlabel('altitude (ft)')
 ylabel('wind direction (radians)')
 title('wind direction by altitude')
 
-% wind speed for 5000th simuation 
+% wind speed for final simulation 
 figure;
 plot(altitude_all, wind_speed_dist)
 grid minor
