@@ -1,0 +1,29 @@
+Comment,Designator,Footprint,LCSC Part #
+10uF Unpolarized capacitor,C1,C_0402_1005Metric,C19702
+10pF Unpolarized capacitor,"C2,C5",C_0402_1005Metric,C32949
+100nF Unpolarized capacitor,"C3,C4,C6,C8",C_0402_1005Metric,C307331
+2.2uF Unpolarized capacitor,C7,C_0402_1005Metric,C12530
+10nF Unpolarized capacitor,C9,C_0402_1005Metric,C15195
+1uF Unpolarized capacitor,"C10,C11",C_0402_1005Metric,C52923
+100uF Unpolarized capacitor,C14,C_0805_2012Metric,C141660
+1000uF Unpolarized capacitor,C15,CP_Elec_10x10.5,C189257
+LED Light emitting diode,"D1,D2,D3",LED_0603_1608Metric,C131286
+"SS34 40V 3A Schottky Diode, SMA","D4,D5,D6,D7,D8,D9,D10,D11,D12",D_SMA,C3032484
+"120R Ferrite bead, small symbol",FB1,L_0603_1608Metric,C85831
+"SWD Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)",J2,PinHeader_1x04_P2.54mm_Vertical,
+"VBAT Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)",J3,TestPoint_THTPad_4.0x4.0mm_Drill2.0mm,
+"GND Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)","J4,J9",TestPoint_THTPad_4.0x4.0mm_Drill2.0mm,
+"FC_M/P Generic connector, single row, 01x08, script generated (kicad-library-utils/schlib/autogen/connector/)",J5,Molex_200528-0080_1x08-1MP_P1.00mm_Horizontal,C132510
+"Conn_01x06 Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)","J6,J8",CONN_S6B-XH-SM4-TB_JST,
+"3V3 Generic connector, single row, 01x01, script generated (kicad-library-utils/schlib/autogen/connector/)",J10,TestPoint_THTPad_4.0x4.0mm_Drill2.0mm,
+100uH Inductor,L1,L_TaiTech_TMPC1265_13.5x12.5mm,C408533
+"RF1S9540SM -74A Id, -55V Vds, Single P-Channel HEXFET Power MOSFET, 20mOhm Ron, TO-220AB","Q1,Q2,Q6,Q14",TO-263-2,C33903
+"IRLZ44NS 47A Id, 55V Vds, 22mOhm Rds Single N-Channel HEXFET Power MOSFET, TO-220AB","Q3,Q7,Q9,Q15",TO-263-2,C538199
+"2N7002 0.115A Id, 60V Vds, N-Channel MOSFET, SOT-23","Q4,Q5,Q8,Q10,Q11,Q12,Q13,Q16",SOT-23,C466660
+4.7k Resistor,"R1,R2",R_0402_1005Metric,C174364
+10k Resistor,"R3,R12",R_0402_1005Metric,C176114
+1k Resistor,"R4,R5,R6,R7,R8,R9,R10,R13,R14,R15,R16,R17,R18,R19,R20,R21,R22,R23,R24",R_0402_1005Metric,C102758
+29.4k Resistor,R11,R_0402_1005Metric,C162880
+"STM32F401CCU6 ARM Cortex-M4 MCU, 256KB flash, 64KB RAM, 84MHz, 1.7-3.6V, 36 GPIO, UFQFPN-48",U1,QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm,C79861
+"LM2576S-3.3 3.3V, 3A SIMPLE SWITCHER® Step-Down Voltage Regulator, TO-263",U3,TO-263-5_TabPin3,C347412
+"16MHz Four pin crystal, GND on pins 2 and 4",Y1,Crystal_SMD_3225-4Pin_3.2x2.5mm,C13738
