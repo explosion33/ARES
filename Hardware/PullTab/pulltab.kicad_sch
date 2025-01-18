@@ -336,8 +336,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "Q"
-				(at 5.08 1.27 0)
+			(property "Reference" "Q1"
+				(at 5.2069 -1.2122 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -346,7 +346,7 @@
 				)
 			)
 			(property "Value" "NMOS"
-				(at 5.08 -1.27 0)
+				(at 5.2069 1.2121 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -354,7 +354,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Package_TO_SOT_THT:TO-220-3_Horizontal_TabDown"
 				(at 5.08 2.54 0)
 				(effects
 					(font
@@ -585,10 +585,10 @@
 				)
 			)
 			(symbol "NMOS_1_1"
-				(pin passive line
-					(at 2.54 5.08 270)
+				(pin input line
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "D"
+					(name "G"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -603,10 +603,10 @@
 						)
 					)
 				)
-				(pin input line
-					(at -5.08 0 0)
+				(pin passive line
+					(at 2.54 5.08 270)
 					(length 2.54)
-					(name "G"
+					(name "D"
 						(effects
 							(font
 								(size 1.27 1.27)
