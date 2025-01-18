@@ -10,6 +10,9 @@
 
 % transfer functions
 
+G_h_num = [1];
+G_h_den = [3 2 1];
+
 G_h = tf(1,[3 2 1]);    % horizontal transfer function
                         % asymmetric deflection --> ang. velocity
 
