@@ -1,3 +1,0 @@
-BUILD/MCP/ARMC6/TARGET_MCP/TOOLCHAIN_ARM/startup_stm32f401xc.o: \
-  TARGET_MCP/TOOLCHAIN_ARM/startup_stm32f401xc.S \
-  BUILD/MCP/ARMC6/mbed_config.h
