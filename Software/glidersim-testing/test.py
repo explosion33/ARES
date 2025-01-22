@@ -2,6 +2,7 @@
 
 import pfh.glidersim as gsim
 import scipy.interpolate
+import scipy.io
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -12,7 +13,7 @@ def lines_to_as(delta_1, delta_2):
     return delta_a, delta_s 
 
 
-T = 10  # Run sim for 10 seconds
+T = 20  # Run sim for T seconds
 
 # Component models: use a pre-built wing and add a suitable harness
 wing = gsim.extras.wings.niviuk_hook3(size=23, verbose=False)
@@ -31,9 +32,19 @@ paraglider = gsim.paraglider.ParagliderSystemDynamics6a(wing, harness)
 # Build a control input sequence for right brake using linear interpolation:
 # the input is 0 until t=3, increases to 1 over t=3..5, holds at 1 until t=22,
 # decreases to zero over t=22..23, and holds at 0 indefinitely.
+
+# ### STEP ###
+# t = np.array([0, 0.99, 1, T])   # times (s)
+# br = np.array([0, 0, 1, 1]) # fraction (1 = 100%)
+# bl = np.array([0, 0, 0, 0])
+# ### ^^^ ###
+
+### RAMP ###
 t = np.array([0, 1, 5, 8, T])   # times (s)
-br = np.array([0, 0, 1, 1, 1]) # fraction (1 = 100%)
-bl = np.array([0, 0, 0, 0, 1])
+br = np.array([0, 0, 1, 1, 0]) # fraction (1 = 100%)
+bl = np.array([0, 0, 0, 0, 0])
+### ^^^ ###
+
 
 delta_bl = scipy.interpolate.interp1d(
     t,      # times
@@ -65,18 +76,19 @@ model = gsim.simulator.ParagliderStateDynamics6a(paraglider, **sim_parameters)
 # Setup and run the simulation
 state0 = model.starting_equilibrium()  # Start the simulation at equilibrium
 
-dt = 0.5  # Record the state every 0.5 seconds
+dt = 0.1  # Record the state every 0.5 seconds
 
 times, states = gsim.simulator.simulate(model, state0, dt=dt, T=T)
 
 omega_z = np.array( states['omega_b2e'][:,2] )
 v_z = np.array( states['v_RM2e'][:,2] )
-print(omega_z)
-print(v_z)
+
+
+# print(v_z)
 
 # initialize deflection arrays
-delta_1 = delta_bl(times)
-delta_2 = delta_br(times)
+delta_1 = delta_br(times)
+delta_2 = delta_bl(times)
 delta_s = np.zeros(len(times))
 delta_a = np.zeros(len(times))
 # calculate asymetric and symetric deflection from the deflections on lines 1 and 2
@@ -87,7 +99,7 @@ for i in range(len(times)):
 
 
 ## plot useful stuff
-fig, ax = plt.subplots(4, 2, sharex=True, figsize = [10,6])
+fig, ax = plt.subplots(4, 2, sharex=True, figsize = [12,8])
 ax[0,0].plot(times, delta_1*100, 'b-')
 ax[0,0].set_ylabel('right break deflection (%)')
 ax[1,0].plot(times, omega_z*(360/(2*np.pi)), 'r-') # turn rad/s into deg/s
@@ -97,14 +109,21 @@ ax[2,0].set_ylabel('asymetric deflection')
 ax[3,0].plot(times, delta_s, 'c-')
 ax[3,0].set_ylabel('symetric deflection')
 ax[-1,0].set_xlabel('time (s)')
+plt.tight_layout()
 for a in ax:
     for x in a:
         x.grid()
 
 # 3D plot: position over time
-plt.figure()
 points = gsim.extras.simulation.sample_paraglider_positions(model, states, times)
 gsim.extras.plots.plot_3d_simulation_path(**points)
 # print(type(points), points)
+
+print(f"times: {times.shape} {times}")
+print(f"asymetric deflection: {delta_a.shape} {delta_a}")
+print(f"angular velocity: {omega_z.shape} {omega_z}")
+
+matdict = dict(times=times, delta_a=delta_a, omega_z=omega_z)
+scipy.io.savemat('simdata.mat', matdict, oned_as='column')
 
 plt.show()

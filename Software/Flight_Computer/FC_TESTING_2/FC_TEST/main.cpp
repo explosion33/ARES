@@ -6,23 +6,11 @@ int main(){
 
     while(true){
 
-        for(int i = 0; i<4; i++){
-            led_B.write(0);
-            led_G.write(1);
-            ThisThread::sleep_for(200ms);
-            led_B.write(1);
-            led_G.write(0);
-            ThisThread::sleep_for(200ms);
-        }
+        led_B.write(1);
+        ThisThread::sleep_for(1000ms);
+        led_B.write(0);
+        ThisThread::sleep_for(1000ms);
 
-        for(int i = 0; i<4; i++){
-            led_B.write(0);
-            ThisThread::sleep_for(200ms);
-            led_B.write(1);
-            ThisThread::sleep_for(200ms);
-        }
-
-        
     }
 }
 
