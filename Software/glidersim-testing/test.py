@@ -17,12 +17,13 @@ T = 20  # Run sim for T seconds
 
 # Component models: use a pre-built wing and add a suitable harness
 wing = gsim.extras.wings.niviuk_hook3(size=23, verbose=False)
+
 harness = gsim.paraglider_harness.Spherical(
     mass=30,
     z_riser=0.5,
     S=0.7,
     CD=1,
-    kappa_w=0.1,
+    kappa_w=0.2,
 )
 
 
