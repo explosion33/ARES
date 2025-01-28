@@ -34,17 +34,17 @@ paraglider = gsim.paraglider.ParagliderSystemDynamics6a(wing, harness)
 # the input is 0 until t=3, increases to 1 over t=3..5, holds at 1 until t=22,
 # decreases to zero over t=22..23, and holds at 0 indefinitely.
 
-# ### STEP ###
-# t = np.array([0, 0.99, 1, T])   # times (s)
-# br = np.array([0, 0, 1, 1]) # fraction (1 = 100%)
-# bl = np.array([0, 0, 0, 0])
-# ### ^^^ ###
-
-### RAMP ###
-t = np.array([0, 1, 5, 8, T])   # times (s)
-br = np.array([0, 0, 1, 1, 0]) # fraction (1 = 100%)
-bl = np.array([0, 0, 0, 0, 0])
+### STEP ###
+t = np.array([0, 0.99, 1, T])   # times (s)
+br = np.array([0, 0, 1, 1]) # fraction (1 = 100%)
+bl = np.array([0, 0, 0, 0])
 ### ^^^ ###
+
+# ### RAMP ###
+# t = np.array([0, 1, 5, 8, T])   # times (s)
+# br = np.array([0, 0, 1, 1, 0]) # fraction (1 = 100%)
+# bl = np.array([0, 0, 0, 0, 0])
+# ### ^^^ ###
 
 
 delta_bl = scipy.interpolate.interp1d(
@@ -81,7 +81,15 @@ dt = 0.1  # Record the state every 0.5 seconds
 
 times, states = gsim.simulator.simulate(model, state0, dt=dt, T=T)
 
-omega_z = np.array( states['omega_b2e'][:,2] )
+w_z = np.array( states['omega_b2e'][:,2] )
+
+# integrate w_z to get theta_z
+N = len(w_z)
+theta_z = np.zeros(N)
+theta_z0 = 0
+for i in range(N-1):
+    theta_z[i+1] = theta_z[i] + w_z[i]*dt
+
 v_z = np.array( states['v_RM2e'][:,2] )
 
 
@@ -101,15 +109,23 @@ for i in range(len(times)):
 
 ## plot useful stuff
 fig, ax = plt.subplots(4, 2, sharex=True, figsize = [12,8])
+
+# left column
 ax[0,0].plot(times, delta_1*100, 'b-')
 ax[0,0].set_ylabel('right break deflection (%)')
-ax[1,0].plot(times, omega_z*(360/(2*np.pi)), 'r-') # turn rad/s into deg/s
+ax[1,0].plot(times, w_z*(360/(2*np.pi)), 'r-') # turn rad/s into deg/s
 ax[1,0].set_ylabel('angular velocity (deg/s)')
 ax[2,0].plot(times, delta_a, 'm-')
 ax[2,0].set_ylabel('asymetric deflection')
-ax[3,0].plot(times, delta_s, 'c-')
-ax[3,0].set_ylabel('symetric deflection')
+ax[3,0].plot(times, theta_z*(360/(2*np.pi)), 'g-')
+ax[3,0].set_ylabel('heading (deg)')
 ax[-1,0].set_xlabel('time (s)')
+
+# right column
+ax[0,1].plot(times, delta_s, 'c-')
+ax[0,1].set_ylabel('symetric deflection')
+ax[-1,1].set_xlabel('time (s)')
+
 plt.tight_layout()
 for a in ax:
     for x in a:
@@ -122,9 +138,9 @@ gsim.extras.plots.plot_3d_simulation_path(**points)
 
 print(f"times: {times.shape} {times}")
 print(f"asymetric deflection: {delta_a.shape} {delta_a}")
-print(f"angular velocity: {omega_z.shape} {omega_z}")
+print(f"angular velocity: {w_z.shape} {w_z}")
 
-matdict = dict(times=times, delta_a=delta_a, omega_z=omega_z)
+matdict = dict(times=times, delta_a=delta_a, w_z=w_z)
 scipy.io.savemat('simdata.mat', matdict, oned_as='column')
 
 plt.show()
