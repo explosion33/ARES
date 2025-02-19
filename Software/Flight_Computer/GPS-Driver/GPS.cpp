@@ -115,29 +115,3 @@ void GPS::update(int msgType, const char* msg){
         }
     }
 }
-
-
-
-
-
-
-
-
-
-/*
-main() {
-    
-    switch(getMsgType()){
-        case NMEA_GGA: {
-            womp
-        }
-    }
-
-}
-*/
-
-
-
-class GPS {
-
-};
