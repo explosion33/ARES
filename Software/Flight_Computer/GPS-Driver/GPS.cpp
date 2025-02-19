@@ -1,98 +1,122 @@
 #include "EUSBSerial.h"
-
-struct {
-  double lat;
-  double lon;
-  double alt;
-  double dop;
-  double heading; 
-  double gspeed;
-  double time;
-} gpsState;
-
-typedef enum {
-    NEMA_NA,    // 0
-    NEMA_GGA,   // 1
-    NEMA_GSA,   // 2
-    NEMA_RMC,   // 3
-    NEMA_VTG    // 4
-} NEMA_Type;
+#include "GPS.h"
 
 
+gpsState GPS::getState() const{
+    return state; // return a copy of the state (can't be modified bc its private)
+}
 
 // say const so that it can't be modified (only reading it)
 // msg will be the entire line 
-NEMA_Type getMsgType(const char* msg) {
+NMEA_Type GPS::getMsgType(const char* msg) {
 
     switch (msg[4]) {
 
         case 'G': { // GGA
-            return NEMA_GGA; // Might need NEMA_Type::NEMA_GGA;
+            return NMEA_GGA; // Might need NMEA_Type::NMEA_GGA;
             break;
         }
 
         case 'S': { // GSA
-            return NEMA_GSA;
+            return NMEA_GSA;
             break;
         }
 
         case 'M': { // RMC
-            return NEMA_GGA;
+            return NMEA_GGA;
             break;
         }
 
         case 'T': { // VTG
-            return NEMA_VTG;
+            return NMEA_VTG;
             break;
         }
     }
-
-    return NEMA_NA; // No type found
+    return NMEA_NA; // No type found
 }
 
 /*
-struct {
-  double lat;
-  double lon;
-  double alt;
-  double dop;
-  double heading; 
-  double gspeed;
-  double time;
-} gpsState;
+typedef enum {
+    NMEA_NA,    // 0
+    NMEA_GGA,   // 1
+    NMEA_GSA,   // 2
+    NMEA_RMC,   // 3
+    NMEA_VTG    // 4
+} NMEA_Type;
 */
 
+// initialize state variables
+int _ = 0;
+double utc = 0;
+double lat;
+char latNS;
+double lon;
+char lonEW;
+int fix;
+double alt;
+double hdop;
+double heading; 
+double gspeed;
 
-gpsState getStateGPS(int type, const char* msg){
+// currently unused vars
+int nsats;
+char altUnits;
+double gsep;
+char gsepUnits;
+double ageCorrection;
+int checksum;
 
 
-    switch (type) {
+void GPS::update(int msgType, const char* msg){
+
+    switch (msgType) {
         
-        case 0: {
-
+        case 0: { // NMEA_NA (type not recognized)
+            printf("Invalid NMEA message type\n");
+            break;
         }
 
-        case 1: {
-
-        }
-
-        case 1: {
+        case 1: { // NMEA_GGA
+            int result = sscanf(msg, "$GPGGA,%lf,%lf,%c,%lf,%c,%d,%d,%lf,%lf,%c,%lf,%c,%lf,*%d", &utc, &lat, &latNS, &lon, \
+                        &lonEW, &fix, &nsats, &hdop, &alt, &altUnits, &gsep, &gsepUnits, &ageCorrection, &checksum);
             
+            this->state.utc = utc;
+            this->state.lat = lat;
+            this->state.latNS = latNS;
+            this->state.lon = lon;
+            this->state.lonEW = lonEW;
+            this->state.fix = fix;
+            this->state.hdop = hdop;
+            this->state.alt = alt;
+
+            if (result != 14){
+                // log failure
+                printf("Failed to parse GGA message\n");
+            }
+            // should I directly modify the state values in sscanf?
+            // printf(result)
+            // logState()
+            break;
         }
 
-        case 1: {
-            
+        case 2: { // NMEA_GSA
+            // use sscanf to update state
+            break;
         }
 
+        case 3: { // NMEA_RMC
+            // use sscanf to update state
+            break;
+        }
+
+        case 4: { // NMEA_VTG
+            // use sscanf to update state
+            break;
+        }
     }
-        sscanf(msg, "$GPGGA,%d.%d,%d.%d,%c,%d.%d,%c,%d,%d,%d.%d,%d.%d", &utc, &utcd, &_, &_, &_);
-        float utc = utc + utcd/10
-
 }
 
-int _ = 0;
-int utc = 0;
-int utcd = 0;
+
 
 
 
@@ -104,7 +128,7 @@ int utcd = 0;
 main() {
     
     switch(getMsgType()){
-        case NEMA_GGA: {
+        case NMEA_GGA: {
             womp
         }
     }
