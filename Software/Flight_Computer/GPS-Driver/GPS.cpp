@@ -45,29 +45,32 @@ typedef enum {
 } NMEA_Type;
 */
 
-// initialize state variables
-int _ = 0;
-double utc = 0;
-double lat;
-char latNS;
-double lon;
-char lonEW;
-int fix;
-double alt;
-double hdop;
-double heading; 
-double gspeed;
-
-// currently unused vars
-int nsats;
-char altUnits;
-double gsep;
-char gsepUnits;
-double ageCorrection;
-int checksum;
 
 
+
+// Q: should I call getMsgType inside update() or leave them separate?
 void GPS::update(int msgType, const char* msg){
+
+    // initialize state variables
+    int _;
+    double utc;
+    double lat;
+    char latNS;
+    double lon;
+    char lonEW;
+    int fix;
+    double alt;
+    double hdop;
+    double heading; 
+    double gspeed;
+
+    // currently unused vars
+    int nsats;
+    char altUnits;
+    double gsep;
+    char gsepUnits;
+    double ageCorrection;
+    int checksum;
 
     switch (msgType) {
         
