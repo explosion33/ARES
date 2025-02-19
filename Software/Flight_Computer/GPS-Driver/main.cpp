@@ -16,18 +16,34 @@ int main(){
 
     char c;
     while(true){
-        // if gps has characters, read into c and write it to USB
-        if (gps.readable()){ 
-            gps.read(&c, 1);
-            pc.write(&c, 1);
+        char buf[256] = {0};
+        int index = 0;
+
+        if (gps.readable()) {
+            gps.read(buf[index], 1);
+            index ++;
         }
 
-        // every 5s & if GPS line has been sent toggle LED & print to USB
-        if (t.read_ms() >= 5000 && c == '\n') {
-            pc.printf("task #%d\n", 2);
-            led_B = !led_B;
-            t.reset();
+        if (index != 0 && buf[index-1] == '\n') {
+            // call GPS code
+            index = 0;
         }
+        
+        
+        
+        // // if gps has characters, read into c and write it to USB
+        // if (gps.readable()){ 
+        //     gps.read(&c, 1);
+        //     pc.write(&c, 1);
+        // }
+
+        // // every 5s & if GPS line has been sent toggle LED & print to USB
+        // if (t.read_ms() >= 5000 && c == '\n') {
+        //     pc.printf("task #%d\n", 2);
+        //     led_B = !led_B;
+        //     t.reset();
+        // }
+
     }
 }
 
