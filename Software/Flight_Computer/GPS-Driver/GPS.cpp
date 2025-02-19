@@ -80,22 +80,22 @@ void GPS::update(int msgType, const char* msg){
             int result = sscanf(msg, "$GPGGA,%lf,%lf,%c,%lf,%c,%d,%d,%lf,%lf,%c,%lf,%c,%lf,*%d", &utc, &lat, &latNS, &lon, \
                         &lonEW, &fix, &nsats, &hdop, &alt, &altUnits, &gsep, &gsepUnits, &ageCorrection, &checksum);
             
-            this->state.utc = utc;
-            this->state.lat = lat;
-            this->state.latNS = latNS;
-            this->state.lon = lon;
-            this->state.lonEW = lonEW;
-            this->state.fix = fix;
-            this->state.hdop = hdop;
-            this->state.alt = alt;
-
-            if (result != 14){
+            if (result == 14) {
+                // If parsing was successful, assign values to the state
+                this->state.utc = utc;
+                this->state.lat = lat;
+                this->state.latNS = latNS;
+                this->state.lon = lon;
+                this->state.lonEW = lonEW;
+                this->state.fix = fix;
+                this->state.hdop = hdop;
+                this->state.alt = alt;
+                // logState()
+            } else {
                 // log failure
                 printf("Failed to parse GGA message\n");
             }
-            // should I directly modify the state values in sscanf?
-            // printf(result)
-            // logState()
+        
             break;
         }
 
