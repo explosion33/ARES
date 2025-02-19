@@ -71,12 +71,12 @@ void GPS::update(int msgType, const char* msg){
 
     switch (msgType) {
         
-        case 0: { // NMEA_NA (type not recognized)
+        case NMEA_NA: { // type not recognized
             printf("Invalid NMEA message type\n");
             break;
         }
 
-        case 1: { // NMEA_GGA
+        case NMEA_GGA: { // GGA
             int result = sscanf(msg, "$GPGGA,%lf,%lf,%c,%lf,%c,%d,%d,%lf,%lf,%c,%lf,%c,%lf,*%d", &utc, &lat, &latNS, &lon, \
                         &lonEW, &fix, &nsats, &hdop, &alt, &altUnits, &gsep, &gsepUnits, &ageCorrection, &checksum);
             
@@ -99,17 +99,17 @@ void GPS::update(int msgType, const char* msg){
             break;
         }
 
-        case 2: { // NMEA_GSA
+        case NMEA_GSA: { // GSA
             // use sscanf to update state
             break;
         }
 
-        case 3: { // NMEA_RMC
+        case NMEA_RMC: { // RMC
             // use sscanf to update state
             break;
         }
 
-        case 4: { // NMEA_VTG
+        case NMEA_VTG: { // VTG
             // use sscanf to update state
             break;
         }
