@@ -1,12 +1,13 @@
 #include "mbed.h"
 #include "EUSBSerial.h"
+#include "GPS.h"
 
 int main(){
     DigitalOut led_G(PA_15);
     DigitalOut led_B(PA_8);
 
     EUSBSerial pc(true); // new class Extended USB Serial
-    BufferedSerial gps(PA_2, PA_3);
+    BufferedSerial gps_serial(PA_2, PA_3);
 
     led_B.write(1);
     
@@ -14,36 +15,48 @@ int main(){
     Timer t;
     t.start();
 
-    char c;
-    while(true){
-        char buf[256] = {0};
-        int index = 0;
+    GPS gps; // instantiate
 
-        if (gps.readable()) {
-            gps.read(buf[index], 1);
+
+    char buf[256] = {0};
+    int index = 0;
+    while(true){
+        // read each character of the message and send to the corresponding buffer index
+        if (gps_serial.readable()) {
+            gps_serial.read(&buf[index], 1);
             index ++;
         }
 
         if (index != 0 && buf[index-1] == '\n') {
-            // call GPS code
-            index = 0;
+            buf[index] = 0; // terminate the string to negate leftovers
+            NMEA_Type msgType = gps.getMsgType(buf);
+            pc.printf("==================================\n");
+            pc.printf("%s", buf); // write the message
+            pc.printf("Message Type: %d\n", msgType); // write the message type
+            gps.update(msgType, buf);
+            gpsState state = gps.getState();
+            pc.printf("Lattitude\t: %f \nLongitude\t: %f \nAltitude\t: %f\n", state.lat, state.lon, state.alt);
+            index = 0; // reset 
         }
-        
-        
-        
-        // // if gps has characters, read into c and write it to USB
-        // if (gps.readable()){ 
-        //     gps.read(&c, 1);
-        //     pc.write(&c, 1);
-        // }
-
-        // // every 5s & if GPS line has been sent toggle LED & print to USB
-        // if (t.read_ms() >= 5000 && c == '\n') {
-        //     pc.printf("task #%d\n", 2);
-        //     led_B = !led_B;
-        //     t.reset();
-        // }
 
     }
+
+    // char c;
+
+    // while(true) {
+    //     // if gps has characters, read into c and write it to USB
+    //     if (gps.readable()){ 
+    //         gps.read(&c, 1);
+    //         pc.write(&c, 1);
+    //     }
+
+    //     // every 5s & if GPS line has been sent toggle LED & print to USB
+    //     if (t.read_ms() >= 5000 && c == '\n') {
+    //         pc.printf("task #%d\n", 2);
+    //         led_B = !led_B;
+    //         t.reset();
+    //     }
+    // }
+
 }
 
