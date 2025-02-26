@@ -30,15 +30,16 @@ int main(){
         if (index != 0 && buf[index-1] == '\n') {
             buf[index] = 0; // terminate the string to negate leftovers
             NMEA_Type msgType = gps.getMsgType(buf);
+            gpsDebug debug = gps.update(msgType, buf); // TODO: combine getMsgType() & udpate() w/ wrapper
             pc.printf("==================================\n");
             pc.printf("%s", buf); // write the message
             pc.printf("Message Type: %d\n", msgType); // write the message type
-            gps.update(msgType, buf);
             gpsState state = gps.getState();
-            pc.printf("Lattitude\t: %f \nLongitude\t: %f \nAltitude\t: %f\n", state.lat, state.lon, state.alt);
+            pc.printf("UTC\t\t: %f \nFix\t\t: %d \nLattitude\t: %f %c \nLongitude\t: %f %c\nAltitude\t: %f\n", \
+                            state.utc, state.fix, state.lat, state.latNS, state.lon, state.lonEW, state.alt);
+            pc.printf("DEBUG\t\t: %d\n", debug);
             index = 0; // reset 
         }
-
     }
 
     // char c;

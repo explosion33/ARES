@@ -49,10 +49,10 @@ typedef enum {
 
 
 
-
 // Q: should I call getMsgType inside update() or leave them separate?
-void GPS::update(int msgType, const char* msg){
+gpsDebug GPS::update(int msgType, const char* msg){
 
+    
     // initialize state variables
     int _;
     double utc;
@@ -79,6 +79,7 @@ void GPS::update(int msgType, const char* msg){
         case NMEA_NA: { // type not recognized
             printf("Invalid NMEA message type\n");
             break;
+            return notype;
         }
 
         case NMEA_GGA: { // GGA
@@ -95,31 +96,36 @@ void GPS::update(int msgType, const char* msg){
                 this->state.fix = fix;
                 this->state.hdop = hdop;
                 this->state.alt = alt;
+                printf("State Succesfully Updated");
                 // logState()
+                return chillin;
             } else {
                 // log failure
                 printf("Failed to parse GGA message\n");
+                return uhoh;
             }
-        
             break;
         }
 
         case NMEA_GSA: { // GSA
             // use sscanf to update state
+            return womp;
             break;
         }
 
         case NMEA_RMC: { // RMC
             // use sscanf to update state
+            return womp;
             break;
         }
 
         case NMEA_VTG: { // VTG
             // use sscanf to update state
+            return womp;
             break;
         }
     }
-
+    return uhoh;
 }
 
 // posECEFg GPS::getPosECEFg() { 

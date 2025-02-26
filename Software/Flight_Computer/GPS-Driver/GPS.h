@@ -47,6 +47,15 @@ typedef enum {
 } NMEA_Type;
 
 
+typedef enum {
+    chillin,    // 0
+    uhoh,       // 1
+    uhoh2,      // 2
+    womp,       // 3
+    notype      // 4
+} gpsDebug;
+
+
 class GPS {
     private:
         gpsState state;
@@ -61,7 +70,7 @@ class GPS {
         GPS();
         gpsState getState() const;
         NMEA_Type getMsgType(const char* msg);
-        void update(int msgType, const char* msg);
+        gpsDebug update(int msgType, const char* msg);
         posLTP getPosLTP();
         // functino: start (GPS LOOOP)
         // initialize buffered serial object
