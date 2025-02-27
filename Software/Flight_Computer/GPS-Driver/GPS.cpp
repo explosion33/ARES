@@ -125,7 +125,7 @@ gpsDebug GPS::update(int msgType, const char* msg){
             break;
         }
     }
-    return uhoh;
+    return womp;
 }
 
 // posECEFg GPS::getPosECEFg() { 

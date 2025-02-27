@@ -11,7 +11,6 @@ struct posECEFg {   // Earth-Centered Earth-Fixed Geodic Coordinates
 };
 
 
-
 struct originECEFr {   // Earth-Centered Earth-Fixed Rectangular Coordinates
     double x;       // get origin of linear tangent plan in ECEF-r coordinates
     double y;       // (will likely be the launch pad)
