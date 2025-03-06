@@ -3,10 +3,7 @@ clear all; close all; clc;
 
 % put linear ODE describing system angular dynamics here
 
-% horizontal:
-
-% verticle:
-
+% xDot = 
 
 % from horizontal TF
 n1 = 0.4339;
@@ -44,6 +41,8 @@ num_mod = [n1_mod n2_mod];
 den_mod = [1 b_mod c_mod];
 G_h_mod = tf(num_mod, den_mod)
 
+den_mod_tune = [1 b_mod c_mod 0]; % multiply by integrator TF (1/s)
+G_h_mod_tune = tf(num_mod, den_mod_tune);
 
 %% Verticle TF
 G_v = tf(1,[2 1 7]);    % verticle transfer function
@@ -60,6 +59,6 @@ S1 = stepinfo(G_h)
 
 
 figure();
-step(G_h_mod)
+step(G_h_mod, 7)
 title('Modified TF')
 S_mod = stepinfo(G_h_mod)
