@@ -63,7 +63,7 @@ int BMP280::updateTemperatureData(){
     //Shifts each byte into useful position
     uint32_t rawTemperature = ((uint32_t)msb << 12) | ((uint32_t)lsb << 4 ) | ((uint32_t)xlsb >> 4);
     // float temp = ((float)rawTemperature * 9.0/5.0) + 32.0; // Convert from native Celcius to Farienheit
-    values.temp_f = (float)rawTemperature * .01;
+    values.temp_f = convert_temp(rawTemperature);
     return total; 
 }
 
@@ -84,6 +84,24 @@ int BMP280::updatePressureData(){
     values.press_psi = (float)rawPressure * .0016 * 0.0145038; 
 
     return total; 
+}
+
+float convert_temp(int32_t adc_T){
+    char calib[6];
+    readData(0x88, calib, 6);
+    uint16_t dig_T1 = calib[1] << 8 | calib[0];
+    int16_t dig_T2 = (calib[3] << 8 | calib[2]);
+    int16_t dig_T3 = (calib[5] << 8 | calib[4]);
+
+
+    int32_t var1, var2, t_fine;
+
+    var1 = ((((adc_T >> 3) - ((int32_t)dig_T1 << 1))) * ((int32_t)dig_T2)) >> 11;
+    var2 = (((((adc_T >> 4) - ((int32_t)dig_T1)) * ((adc_T >> 4) - ((int32_t)dig_T1))) >> 12) * ((int32_t)dig_T3)) >> 14;
+
+    t_fine = var1 + var2;
+    float temperature = (t_fine * 5 + 128) >> 8;
+    return temperature / 100.0f; // Convert to Celsius
 }
 
 // @breif returns pressure data

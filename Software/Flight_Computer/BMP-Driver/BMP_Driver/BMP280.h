@@ -64,5 +64,6 @@ class BMP280 {
 
         float readTemperatureData();
         float readPressureData();
+        float convert_temp(int32_t adc_T);
 
 };
