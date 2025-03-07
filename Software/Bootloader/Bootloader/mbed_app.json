@@ -6,9 +6,10 @@
     },
     "target_overrides": {
         "ARES": {
-            "target.mbed_app_start": "0x08010000",
+            "target.restrict_size": "0x10000",
             "target.mbed_rom_start": "0x08000000",
-            "target.mbed_rom_size" : "0x40000"
+            "target.mbed_rom_size" : "0x40000",
+            "target.components_add": ["FLASHIAP"]
         }
     }
 }
