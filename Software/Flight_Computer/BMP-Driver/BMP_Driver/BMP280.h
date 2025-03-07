@@ -8,8 +8,8 @@
 using namespace std;
 
 struct BMP280_Values {
-    int32_t press_psi; // Pressure in PSI
-    int32_t temp_f; // Temperature in Farenheit 
+    float press_psi; // Pressure in PSI
+    float temp_f; // Temperature in Farenheit 
 };
 
 // Error Status Handling
@@ -43,11 +43,21 @@ class BMP280 {
         int writeData(char regaddr, char data);
         int readData(char regaddr, char* data, uint8_t len);
 
-        BMP280_Values getPressureData();
-        BMP280_Values getTemperatureData();  
+        uint32_t getPressure();
+        uint32_t getTemperature(); 
+        int updateValues(); 
+
+        
 
     private: 
 
+        int updatePressureData();
+        int updateTemperatureData();
+        BMP280_Status getTemperatureStatus();
+        BMP280_Status getPressureStatus(); 
+
+        BMP280_Status status; 
+        BMP280_Values values;
         bool owned;
         char addr; 
         I2C* i2c; 

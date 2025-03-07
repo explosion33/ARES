@@ -2,12 +2,14 @@
 #include"BMP280.h" 
 #include"BMP280_const.h" 
 #include<map> 
+#include<iostream>
+using namespace std;
 
 /* Constructor 
-* @param Pin address of the SDA Pin on the processor 
-* @param Pin address of the SCL Pin on the processor    
-* @param The I2C address for the BMP280
-*/
+ * @param Pin address of the SDA Pin on the processor 
+ * @param Pin address of the SCL Pin on the processor    
+ * @param The I2C address for the BMP280
+ */
 BMP280::BMP280(PinName SDA, PinName SCL, char addr){ 
     owned = true; 
     BMP280::i2c = new I2C(SDA,SCL);
@@ -15,8 +17,8 @@ BMP280::BMP280(PinName SDA, PinName SCL, char addr){
 }
 
 /* Destructor
-* Deletes I2C if created in object
-*/ 
+ * Deletes I2C if created in object
+ */ 
 BMP280::~BMP280() {
     if(owned){
         delete i2c; 
@@ -48,42 +50,61 @@ int BMP280::writeData(char regaddr, char data) {
 }
 
 /* @brief Retrieves and organizes temperature data
-* @return calulated temperature value
-*/ 
-BMP280_Values BMP280::getTemperatureData(){
+ * @return calulated temperature value
+ */ 
+int BMP280::updateTemperatureData(){
     char xlsb, lsb, msb; 
-    readData(BMP280_TEMP_XLSB, &xlsb, 1);
-    readData(BMP280_TEMP_LSB, &lsb, 1);
-    readData(BMP280_TEMP_MSB, &msb, 1);
-
+    int msbErr, lsbErr, xlsbErr; 
+    xlsbErr = readData(BMP280_TEMP_XLSB, &xlsb, 1);
+    lsbErr = readData(BMP280_TEMP_LSB, &lsb, 1);
+    msbErr = readData(BMP280_TEMP_MSB, &msb, 1);
+    
+    int total = xlsbErr + lsbErr + msbErr;
     //Shifts each byte into useful position
-    int32_t rawTemperature = ((int32_t)msb << 12) | ((int32_t)lsb << 4 ) | ((int32_t)xlsb >> 4);
-    rawTemperature = (rawTemperature * 9/5) + 32; // Convert from native Celcius to Farienheit
-
-    BMP280_Values values;
-    values.temp_f = rawTemperature;
-    return values;
+    uint32_t rawTemperature = ((uint32_t)msb << 12) | ((uint32_t)lsb << 4 ) | ((uint32_t)xlsb >> 4);
+    // float temp = ((float)rawTemperature * 9.0/5.0) + 32.0; // Convert from native Celcius to Farienheit
+    values.temp_f = (float)rawTemperature * .01;
+    return total; 
 }
 
 /* @brief Retrieves and organizes pressure data
-* @return calulated pressure value
-*/ 
-BMP280_Values BMP280::getPressureData(){
+ * @return calulated pressure value
+ */ 
+int BMP280::updatePressureData(){
     char xlsb, lsb, msb;
-    readData(BMP280_PRESS_XLSB, &xlsb, 1); // Extra least significant byte 
-    readData(BMP280_PRESS_LSB, &lsb, 1); // Least significant byte 
-    readData(BMP280_PRESS_MSB, &msb, 1); // Most significant byte 
+    int msbErr, lsbErr, xlsbErr; 
+    xlsbErr = readData(BMP280_PRESS_XLSB, &xlsb, 1); // Extra least significant byte 
+    lsbErr = readData(BMP280_PRESS_LSB, &lsb, 1);// Least significant byte 
+    msbErr = readData(BMP280_PRESS_MSB, &msb, 1); // Most significant byte 
+    int total = xlsbErr + lsbErr + msbErr;
 
     // Shifts each byte into useful position 
-    int32_t rawPressure = ((int32_t)msb << 12) | ((int32_t)lsb << 4 ) | ((int32_t)xlsb >> 4);
-    rawPressure = rawPressure * 0.0145037738; // Convert from native Hectopascal to psi 
+    uint32_t rawPressure = ((uint32_t)msb << 12) | ((uint32_t)lsb << 4 ) | ((uint32_t)xlsb >> 4);
+    // float press = (float)rawPressure * 0.0145037738; // Convert from native Hectopascal to psi 
+    values.press_psi = (float)rawPressure * .0016 * 0.0145038; 
 
-    BMP280_Values values;
-    values.press_psi = rawPressure; 
-    return values; 
+    return total; 
 }
 
+// @breif returns pressure data
+uint32_t BMP280::getPressure(){
+    return values.press_psi;
+}
 
+// @brief returns temperature value
+uint32_t BMP280::getTemperature(){
+    return values.temp_f;
+}
 
+// @breif updates sensor values 
+int BMP280::updateValues(){
+    int errPress  = updatePressureData();
+    int errTemp = updateTemperatureData();
+    return(errPress + errTemp);
+}
 
-
+/* @breif check for error from the pressure reading
+*/
+BMP280_Status BMP280::getPressureStatus() {
+ return BMP280_Status::Ok; 
+}
