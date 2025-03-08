@@ -8,9 +8,21 @@
 using namespace std;
 
 struct BMP280_Values {
-    float press_psi; // Pressure in PSI
-    float temp_f; // Temperature in Farenheit 
+    double press_psi; // Pressure in PSI
+    double temp_f; // Temperature in Farenheit 
 };
+
+
+struct BMP280_Calibration {
+            // Temperature 
+            uint16_t dig_T1;
+            int16_t dig_T2, dig_T3;
+
+            //Pressure 
+            uint16_t dig_P1;
+            int16_t dig_P2, dig_P3, dig_P4, dig_P5, dig_P6, dig_P7, dig_P8, dig_P9;
+};
+
 
 // Error Status Handling
 enum class BMP280_Status {
@@ -43,8 +55,8 @@ class BMP280 {
         int writeData(char regaddr, char data);
         int readData(char regaddr, char* data, uint8_t len);
 
-        uint32_t getPressure();
-        uint32_t getTemperature(); 
+        float getPressure();
+        float getTemperature(); 
         int updateValues(); 
 
         
@@ -58,12 +70,18 @@ class BMP280 {
 
         BMP280_Status status; 
         BMP280_Values values;
+        BMP280_Calibration c;
+
         bool owned;
         char addr; 
         I2C* i2c; 
+        int32_t t_fine;
 
         float readTemperatureData();
         float readPressureData();
-        float convert_temp(int32_t adc_T);
+        double convert_temp(int32_t adc_T); 
+        double BMP280_compensate_P_double(int32_t adc_T);
+        int BMP280_CalibrateTemp();
+        int BMP280_CalibratePress();
 
 };

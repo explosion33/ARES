@@ -61,7 +61,7 @@ int BMP280::updateTemperatureData(){
     
     int total = xlsbErr + lsbErr + msbErr;
     //Shifts each byte into useful position
-    uint32_t rawTemperature = ((uint32_t)msb << 12) | ((uint32_t)lsb << 4 ) | ((uint32_t)xlsb >> 4);
+    int32_t rawTemperature = ((int32_t)msb << 12) | ((int32_t)lsb << 4 ) | ((int32_t)xlsb >> 4);
     // float temp = ((float)rawTemperature * 9.0/5.0) + 32.0; // Convert from native Celcius to Farienheit
     values.temp_f = convert_temp(rawTemperature);
     return total; 
@@ -81,36 +81,53 @@ int BMP280::updatePressureData(){
     // Shifts each byte into useful position 
     uint32_t rawPressure = ((uint32_t)msb << 12) | ((uint32_t)lsb << 4 ) | ((uint32_t)xlsb >> 4);
     // float press = (float)rawPressure * 0.0145037738; // Convert from native Hectopascal to psi 
-    values.press_psi = (float)rawPressure * .0016 * 0.0145038; 
+    values.press_psi = BMP280_compensate_P_double(rawPressure); 
 
     return total; 
 }
 
-float convert_temp(int32_t adc_T){
-    char calib[6];
-    readData(0x88, calib, 6);
-    uint16_t dig_T1 = calib[1] << 8 | calib[0];
-    int16_t dig_T2 = (calib[3] << 8 | calib[2]);
-    int16_t dig_T3 = (calib[5] << 8 | calib[4]);
+double BMP280::convert_temp(int32_t adc_T){
+    int err = BMP280_CalibrateTemp();
 
-
-    int32_t var1, var2, t_fine;
-
-    var1 = ((((adc_T >> 3) - ((int32_t)dig_T1 << 1))) * ((int32_t)dig_T2)) >> 11;
-    var2 = (((((adc_T >> 4) - ((int32_t)dig_T1)) * ((adc_T >> 4) - ((int32_t)dig_T1))) >> 12) * ((int32_t)dig_T3)) >> 14;
-
-    t_fine = var1 + var2;
-    float temperature = (t_fine * 5 + 128) >> 8;
-    return temperature / 100.0f; // Convert to Celsius
+    double var1, var2, T;
+    var1 = (((double)adc_T)/16384.0 - ((double)c.dig_T1)/1024.0) * ((double)c.dig_T2);
+    var2 = ((((double)adc_T)/131072.0 - ((double)c.dig_T1)/8192.0) * 
+    (((double)adc_T)/131072.0 - ((double)c.dig_T1)/8192.0)) * ((double)c.dig_T3);
+    t_fine = (int32_t)(var1 + var2);
+    T = (var1 + var2)/5120.0;
+    return T;
 }
 
 // @breif returns pressure data
-uint32_t BMP280::getPressure(){
+float BMP280::getPressure(){
     return values.press_psi;
 }
 
+double BMP280::BMP280_compensate_P_double(int32_t adc_P){
+    int err = BMP280_CalibratePress(); 
+
+    double var1, var2, p;
+    var1 = ((double)t_fine/2.0) - 64000.0;
+    var2 = var1 * var1 * ((double)c.dig_P6) / 32768.0;
+    var2 = var2 + var1 * ((double)c.dig_P5) * 2.0;
+    var2 = (var2/4.0)+(((double)c.dig_P4) * 65536.0);
+    var1 = (((double)c.dig_P3) * var1 * var1 / 524288.0 + ((double)c.dig_P2) * var1) / 524288.0;
+    var1 = (1.0 + var1 / 32768.0)*((double)c.dig_P1);
+    if (var1 == 0.0){
+        return 0; // avoid exception caused by division by zero
+    }
+    p = 1048576.0 - (double)adc_P;
+    p = (p - (var2 / 4096.0)) * 6250.0 / var1;
+    var1 = ((double)c.dig_P9) * p * p / 2147483648.0;
+    var2 = p * ((double)c.dig_P8) / 32768.0;
+    p = p + (var1 + var2 + ((double)c.dig_P7)) / 16.0;
+    return p;
+}
+
+
+
 // @brief returns temperature value
-uint32_t BMP280::getTemperature(){
+float BMP280::getTemperature(){
     return values.temp_f;
 }
 
@@ -125,4 +142,58 @@ int BMP280::updateValues(){
 */
 BMP280_Status BMP280::getPressureStatus() {
  return BMP280_Status::Ok; 
+}
+
+//@briif calibrates temperature values
+// - Array Calib: each calibration number comes in a lsb and msb pair 
+int BMP280::BMP280_CalibrateTemp(){
+    char calib[6];
+    readData(0x88, calib, 6);
+    c.dig_T1 = calib[1] << 8 | calib[0];
+    c.dig_T2 = (calib[3] << 8 | calib[2]);
+    c.dig_T3 = (calib[5] << 8 | calib[4]);
+    return 0;
+}
+
+int BMP280::BMP280_CalibratePress(){
+    char calib[18];
+
+    // Read Calibration data 
+    readData(0x8E, calib, 18);
+
+    // int t1 = readData(0x8E, &calib[0],1);
+    // int t2 = readData(0x8F, &calib[1], 1);
+    // int t3 = readData(0x90, &calib[2],1);
+    // int t4 = readData(0x91, &calib[3], 1);
+    // int t5 = readData(0x92, &calib[4],1);
+    // int t6 = readData(0x93, &calib[5], 1);
+    // int t7 = readData(0x94, &calib[6], 1);
+    // int t8 = readData(0x95, &calib[7], 1);
+    // int t9 = readData(0x96, &calib[8], 1);
+    // int t10 = readData(0x97, &calib[9], 1);
+    // int t11 = readData(0x98, &calib[10],1);
+    // int t12 = readData(0x99, &calib[11], 1);
+    // int t13 = readData(0x9A, &calib[12], 1);
+    // int t14 = readData(0x9B, &calib[13], 1);
+    // int t15 = readData(0x9C, &calib[14], 1);
+    // int t16 = readData(0x9D, &calib[15], 1);
+    // int t17 = readData(0x9E, &calib[16], 1);
+    // int t18 = readData(0x9F, &calib[17], 1);
+
+    // int err = t1 + t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10 +
+    //         t11 + t12 + t13 + t14 + t15 + t16 + t17 + t18;
+
+    //Store Calibration data
+    c.dig_P1 = calib[0] | calib[1] << 8;
+    c.dig_P2 = calib[2] | calib[3] << 8;
+    c.dig_P3 = calib[4] | calib[5] << 8;
+    c.dig_P4 = calib[6] | calib[7] << 8;
+    c.dig_P5 = calib[8] | calib[9] << 8;
+    c.dig_P6 = calib[10] | calib[11] << 8;
+    c.dig_P7 = calib[12] | calib[13] << 8;
+    c.dig_P8 = calib[14] | calib[15] << 8;
+    c.dig_P9 = calib[16] | calib[17] << 8;
+
+    return 0;
+
 }
